@@ -1,9 +1,9 @@
 make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
-sudo mknod /dev/finger c 60 0
-sudo chmod 666 /dev/finger
-sudo insmod finger.ko
-echo -n H >/dev/finger
-cat /dev/finger
+sudo mknod /dev/xktty c 60 0
+sudo chmod 666 /dev/xktty
+sudo insmod xktty.ko
+echo -n H >/dev/xktty
+cat /dev/xktty
 
 lsmod
-sudo rmmod finger
+sudo rmmod xktty
