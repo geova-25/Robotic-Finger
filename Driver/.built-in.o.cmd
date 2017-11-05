@@ -1,0 +1,1 @@
+cmd_/home/giovanni/Documents/git/Robotic-Finger/Driver/built-in.o :=  rm -f /home/giovanni/Documents/git/Robotic-Finger/Driver/built-in.o; ar rcsD /home/giovanni/Documents/git/Robotic-Finger/Driver/built-in.o

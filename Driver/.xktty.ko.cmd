@@ -1,0 +1,1 @@
+cmd_/home/giovanni/Documents/git/Robotic-Finger/Driver/xktty.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/giovanni/Documents/git/Robotic-Finger/Driver/xktty.ko /home/giovanni/Documents/git/Robotic-Finger/Driver/xktty.o /home/giovanni/Documents/git/Robotic-Finger/Driver/xktty.mod.o
