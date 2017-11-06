@@ -1,0 +1,9 @@
+make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+sudo mknod /dev/robotic_finger c 60 0
+sudo chmod 666 /dev/robotic_finger
+sudo insmod robotic_finger.ko
+echo 'Hola' > /dev/robotic_finger
+cat /dev/robotic_finger
+
+lsmod
+sudo rmmod robotic_finger
