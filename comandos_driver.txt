@@ -1,9 +1,0 @@
-make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
-sudo mknod /dev/xktty c 60 0
-sudo chmod 666 /dev/xktty
-sudo insmod xktty.ko
-echo -n H >/dev/xktty
-cat /dev/xktty
-
-lsmod
-sudo rmmod xktty
