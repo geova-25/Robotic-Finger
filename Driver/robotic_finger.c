@@ -239,3 +239,4 @@ MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Giovanni Villalobos, ITCR");
 MODULE_DESCRIPTION("This module is used to send instructions to robotic Finger"
     "throught serial communication");
+MODULE_VERSION("1.0"); 
