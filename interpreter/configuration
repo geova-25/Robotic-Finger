@@ -1,0 +1,4 @@
+touch
+push
+drag 50 20
+cypher 1 1 2 2 3 3
