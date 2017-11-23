@@ -79,36 +79,40 @@ void getInstruction(char line[LARGO_LINEA], int itera){
 
 	if (strncmp(line, "touch", 5) == 0)
 	{	
-		printf("touch\n");
+		//printf("touch\n");
 		instrus[itera][0] = 1;
 
 	}
 	else if (strncmp(line, "push", 4) == 0)
 	{
-		printf("push\n");
+		//printf("push\n");
 		instrus[itera][0] = 2;
 	}
 	else if (strncmp(line, "drag", 4) == 0)
 	{
-		printf("drag\n");
+		//printf("drag\n");
 		tokens = strSplit(line, ' ');
 		int y = atoi(*(tokens + 1));
-		int x = atoi(*(tokens + 2));
+
+
     	instrus[itera][0] = 3;
+
     	instrus[itera][1] = y;
-    	instrus[itera][2] = x;
+
+
 	}
 	else if (strncmp(line, "cypher", 6) == 0)
 	{
-		printf("cypher\n");
+		//printf("cypher\n");
 		tokens = strSplit(line, ' ');
 		int n = count_tmp - 1;
 		int coord;
 		instrus[itera][0] = 4;
+		instrus[itera][1] = n;
 		for (int i = 1; i < n; ++i)
 		{
 			coord = atoi(*(tokens + i));
-			instrus[itera][i] = coord;
+			instrus[itera][i+1] = coord;
 
 			//printf("Coord: %d ", coord);
 		}
@@ -123,12 +127,14 @@ void getDataConfig(){
  	
  	char caracteres[LARGO_LINEA];
  	
- 	archivo = fopen("configuration","r+");
+ 	archivo = fopen("interpreter/configuration","r+");
 
 
  	
- 	if (archivo == NULL)
+ 	if (archivo == NULL) {
+ 		printf("Salio\n");
  		exit(1);
+ 	}
 
  	int lines = 0;
  	char ch;
@@ -149,7 +155,7 @@ void getDataConfig(){
  	assignedSpace(lines);
 
 
- 	archivo = fopen("configuration","r+");
+ 	archivo = fopen("interpreter/configuration","r+");
  	for (int i = 0; i < lines; ++i)
  	{
  		fgets(caracteres,LARGO_LINEA,archivo);
