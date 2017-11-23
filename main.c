@@ -1,4 +1,5 @@
 #include "interpreter.h"
+#include "roboticFingerCon.h"
 #include <string.h>
 
 int main()
@@ -23,7 +24,7 @@ int main()
 
  	/*for (int i = 1; i < n*30-1; ++i)
  	{
- 		
+
  	}*/
  	//instru_total[n*30-1] = '\0';
 
@@ -75,6 +76,8 @@ int main()
  	}
 
  	printf("El string final es:%s\n", instru_total);
+  sendDataToFinger(instru_total);
+
 
  	return 0;
 }

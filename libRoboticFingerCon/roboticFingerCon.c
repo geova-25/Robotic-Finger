@@ -18,21 +18,22 @@ void sendDataToFinger(char* stringToSend)
   fclose(fp);
 }
 
+/*
 int main(int argc, char *argv[])
 {
-  char* result = calloc(100,sizeof(char));
-  char* newData = calloc(100,sizeof(char));
-  char* newData2 = calloc(100,sizeof(char));
-  newData2 = "Test 4";
-  /*
-  newData[0] = '0';
-  newData[1] = '1';
-  newData[2] = '2';
-  newData[3] = '3';
-  newData[4] = '5';
-  */
+  //char* result = calloc(100,sizeof(char));
+  //char* newData = calloc(100,sizeof(char));
+  //char* newData2 = calloc(100,sizeof(char));
+  //newData2 = "Test 4";
+
+  //newData[0] = '0';
+  //newData[1] = '1';
+  //newData[2] = '2';
+  //newData[3] = '3';
+  //newData[4] = '5';
   newData = "No way man";
   strcat(result,newData);
   strcat(result,newData2);
   sendDataToFinger(result);
 }
+*/
