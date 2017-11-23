@@ -72,10 +72,12 @@ char** strSplit(char* a_str, const char a_delim)
     return result;
 }
 
-void getInstruction(char line[LARGO_LINEA], int itera){
+int getInstruction(char line[LARGO_LINEA], int itera){
 	//printf("cambio de linea%s\n");       line == "bridge1 ="
 	char** tokens;
 	int *instru_actual;
+
+	int sal = 0;
 
 	if (strncmp(line, "touch", 5) == 0)
 	{	
@@ -93,12 +95,13 @@ void getInstruction(char line[LARGO_LINEA], int itera){
 		//printf("drag\n");
 		tokens = strSplit(line, ' ');
 		int y = atoi(*(tokens + 1));
-
-
-    	instrus[itera][0] = 3;
-
-    	instrus[itera][1] = y;
-
+		if (y > 0 && y < 10) {
+			instrus[itera][0] = 3;
+    		instrus[itera][1] = y;
+		} else {
+			printf("En drag: Rango %d fuera de limites 1-9\n", y);
+			sal = -1;
+		}
 
 	}
 	else if (strncmp(line, "cypher", 6) == 0)
@@ -112,13 +115,25 @@ void getInstruction(char line[LARGO_LINEA], int itera){
 		for (int i = 1; i < n; ++i)
 		{
 			coord = atoi(*(tokens + i));
-			instrus[itera][i+1] = coord;
+			if (coord > 0 && coord < 10) {
+				instrus[itera][i+1] = coord;
+			} else {
+				printf("En cypher: Rango %d\n fuera de limites 1-9", y)
+				sal = -1;
+				break;
+			}
+			
 
 			//printf("Coord: %d ", coord);
 		}
 
 		//printf("\n");
+	} else {
+		printf("Comando erroneo\n");
+		sal = -1;
 	}
+
+	return sal;
 
 }
 
@@ -151,17 +166,24 @@ void getDataConfig(){
  	sizeInstrus = lines;
 
  	fclose(archivo);
-   	
- 	assignedSpace(lines);
 
+ 	if (lines > 0) {
+ 		assignedSpace(lines);
+	 	archivo = fopen("interpreter/configuration","r+");
+	 	int instru_correcta;
+	 	for (int i = 0; i < lines; ++i)
+	 	{
+	 		fgets(caracteres,LARGO_LINEA,archivo);
 
- 	archivo = fopen("interpreter/configuration","r+");
- 	for (int i = 0; i < lines; ++i)
- 	{
- 		fgets(caracteres,LARGO_LINEA,archivo);
+	 		instru_correcta = getInstruction(caracteres, i);
+	 		if (instru_correcta != 0) {
+	 			i--;
+	 		}
 
- 		getInstruction(caracteres, i);
+	 	}
+
+	    fclose(archivo);
  	}
-
-    fclose(archivo);
+   	
+ 	
 }
