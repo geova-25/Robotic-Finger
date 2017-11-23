@@ -151,17 +151,19 @@ void getDataConfig(){
  	sizeInstrus = lines;
 
  	fclose(archivo);
-   	
- 	assignedSpace(lines);
 
+ 	if (lines > 0) {
+ 		assignedSpace(lines);
+	 	archivo = fopen("interpreter/configuration","r+");
+	 	for (int i = 0; i < lines; ++i)
+	 	{
+	 		fgets(caracteres,LARGO_LINEA,archivo);
 
- 	archivo = fopen("interpreter/configuration","r+");
- 	for (int i = 0; i < lines; ++i)
- 	{
- 		fgets(caracteres,LARGO_LINEA,archivo);
+	 		getInstruction(caracteres, i);
+	 	}
 
- 		getInstruction(caracteres, i);
+	    fclose(archivo);
  	}
-
-    fclose(archivo);
+   	
+ 	
 }
