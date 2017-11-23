@@ -9,6 +9,6 @@
 
 void assignedSpace(int total_instructions);
 void getDataConfig();
-void getInstruction(char line[LARGO_LINEA], int itera);
+int getInstruction(char line[LARGO_LINEA], int itera);
 int **getInstrus();
 int getSizeInstrus();

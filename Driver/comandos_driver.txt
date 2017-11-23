@@ -1,19 +1,16 @@
 #-------------------To compile the driver
 
 make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
-sudo mknod /dev/robotic_finger c 60 0
 
 #-------------------To insert the driver
 
-sudo chmod 666 /dev/robotic_finger
 sudo insmod robotic_finger.ko
+sudo chmod 666 /dev/robotic_finger
 
 
 #--------------------To test the driver
 
 echo 'Hola' > /dev/robotic_finger
-cat /dev/robotic_finger
-
 
 #-------------------To remove the driver
 

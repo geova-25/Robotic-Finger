@@ -46,7 +46,7 @@ char** strSplit(char* a_str, const char a_delim)
     /* agregando un spacio por cada token*/
     count += last_comma < (a_str + strlen(a_str) - 1);
 
-    /* Agregue espacio para terminar la cadena nula de modo que 
+    /* Agregue espacio para terminar la cadena nula de modo que
     el llamador sepa dónde termina la lista de cadenas devueltas. */
     count++;
 
@@ -80,7 +80,7 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 	int sal = 0;
 
 	if (strncmp(line, "touch", 5) == 0)
-	{	
+	{
 		//printf("touch\n");
 		instrus[itera][0] = 1;
 
@@ -118,11 +118,11 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 			if (coord > 0 && coord < 10) {
 				instrus[itera][i+1] = coord;
 			} else {
-				printf("En cypher: Rango %d\n fuera de limites 1-9", y)
+				printf("En cypher: Rango %d\n fuera de limites 1-9", coord);
 				sal = -1;
 				break;
 			}
-			
+
 
 			//printf("Coord: %d ", coord);
 		}
@@ -139,13 +139,13 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 
 void getDataConfig(){
 	FILE *archivo;
- 	
+
  	char caracteres[LARGO_LINEA];
- 	
+
  	archivo = fopen("interpreter/configuration","r+");
 
 
- 	
+
  	if (archivo == NULL) {
  		printf("Salio\n");
  		exit(1);
@@ -184,6 +184,6 @@ void getDataConfig(){
 
 	    fclose(archivo);
  	}
-   	
- 	
+
+
 }

@@ -1,0 +1,1000 @@
+ 1063  uname -a
+ 1064  uname -r
+ 1065  make -C /usr/src/linux-headers-4.4.0-53 M=$(pwd modules)
+ 1066  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1067  reset
+ 1068  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1069  reset
+ 1070  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1071  make clean
+ 1072  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1073  sudo chmod 666 /dev/memory
+ 1074  sudo chmod 666 /dev/xktty
+ 1075  sudo insmod nothing.ko
+ 1076  sudo insmod xktty.ko
+ 1077  lsmod
+ 1078  lsmod && grep "xktty"
+ 1079  grep "xktty"
+ 1080  grep &&(lsmod)
+ 1081  grep "xktty" &&(lsmod)
+ 1082  sudo chmod 666 /dev/xktty
+ 1083  echo 'Dhgd' > /dev/xktty
+ 1084  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1085  sudo insmod xktty.ko
+ 1086  sudo rmmod xktty.ko
+ 1087  sudo insmod xktty.ko
+ 1088  sudo chmod 666 /dev/xktty
+ 1089  echo 'Dhgd' > /dev/xktty
+ 1090  echo 'Sera?' > /dev/xktty
+ 1091  cho 'Dunia, vipi?' > /dev/ttyS0
+ 1092  echo 'Dunia, vipi?' > /dev/ttyS0
+ 1093  echo 'Dunia, vipi?' > /dev/ttyACM0
+ 1094  echo 'D' > /dev/ttyACM0
+ 1095  echo 'Dhgd' > /dev/ttyACM0
+ 1096  echo 'Dhgd' > /dev/xktty
+ 1097  sudo echo 'Dhgd' > /dev/xktty
+ 1098  echo 'Dhgd' > /dev/xktty
+ 1099  ls /dev
+ 1100  echo 'Dhgd' > /dev/xktty
+ 1101  git status
+ 1102  git add * 
+ 1103  git commit -m "Final status of the project completed"
+ 1104  git push
+ 1105  make clean1 
+ 1106  make clean1
+ 1107  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1108  make clean1
+ 1109  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1110  sudo insmod xktty.ko
+ 1111  sudo rmmod xktty.ko
+ 1112  sudo insmod xktty.ko
+ 1113  echo 'Dh' > /dev/xktty
+ 1114  sudo chmod 666 /dev/memory
+ 1115  sudo chmod 666 /dev/xktty
+ 1116  echo 'Dh' > /dev/xktty
+ 1117  cd ..
+ 1118  git status
+ 1119  git add * 
+ 1120  git commit -m "Driver initial test working but set as default, needs to be adequated"
+ 1121  git push 
+ 1122  git pull
+ 1123  git status
+ 1124  git push 
+ 1125  git status
+ 1126  ls -l
+ 1127  ls -l /dev
+ 1128  ls /dev
+ 1129  echo 'Dunia, vipi?' > /dev/xktty
+ 1130  sudo rmmod xktty
+ 1131  sudo rmmod -f xktty 
+ 1132  cd Documents/git/Robotic-Finger/Driver/
+ 1133  sudo insmod xktty
+ 1134  sudo insmod xktty.ko
+ 1135  sudo rmmod xktty
+ 1136  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1137  sudi insmod xktty.ko
+ 1138  sudo insmod xktty.ko
+ 1139  sudo chmod 666 /dev/xktty
+ 1140  echo 'Ha' > /dev/xktty
+ 1141  sudo rmmod xktty
+ 1142  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1143  sudo insmod xktty.ko
+ 1144  echo 'a' > /dev/xktty
+ 1145  sudo chmod 666 /dev/xktty
+ 1146  echo 'a' > /dev/xktty
+ 1147  sudo rmmod xktty
+ 1148  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1149  sudo insmod xktty.ko
+ 1150  sudo chmod 666 /dev/xktty
+ 1151  echo 'b' > /dev/xktty
+ 1152  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1153  sudo rmmod xktty
+ 1154  sudo insmod xktty.ko
+ 1155  echo 'b' > /dev/xktty
+ 1156  sudo chmod 666 /dev/xktty
+ 1157  echo 'b' > /dev/xktty
+ 1158  cd ..
+ 1159  git add * 
+ 1160  git commit -m "Fixed documentation"
+ 1161  git push
+ 1162  cd Driver/
+ 1163  make clean
+ 1164  sudo rmmod xktty
+ 1165  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1166  sudo insmod robotic_finger.ko
+ 1167  sudo chmod 666 /dev/robotic_finger
+ 1168  echo 'Hola' > /dev/robotic_finger
+ 1169  sudo rmmod robotic_finger
+ 1170  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1171  sudo insmod robotic_finger.ko
+ 1172  sudo chmod 666 /dev/robotic_finger
+ 1173  echo 'Holips' > /dev/robotic_finger
+ 1174  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1175  sudo rmmod robotic_finger
+ 1176  sudo insmod robotic_finger.ko
+ 1177  echo 'Holis' > /dev/robotic_finger
+ 1178  sudo chmod 666 /dev/robotic_finger
+ 1179  echo 'Holis' > /dev/robotic_finger
+ 1180  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1181  sudo rmmod robotic_finger
+ 1182  sudo insmod robotic_finger.ko
+ 1183  sudo chmod 666 /dev/robotic_finger
+ 1184  echo 'test1' > /dev/robotic_finger
+ 1185  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1186  sudo rmmod robotic_finger
+ 1187  sudo insmod robotic_finger.ko
+ 1188  sudo chmod 666 /dev/robotic_finger
+ 1189  echo 'test2' > /dev/robotic_finger
+ 1190  cd ..
+ 1191  git add * 
+ 1192  git commit -m "Code changed to be understandable to project and indications of what code was used as a base"
+ 1193  git push
+ 1194  cd Driver/
+ 1195  cd Telegram/
+ 1196  sudo sh runTelegram.sh 
+ 1197  exit
+ 1198  sudo adduser mpiuser
+ 1199  sudo apt­-get install openssh-server
+ 1200  apt-get install openmpi-bin openmpi-common libopenmpi1 libopenmpi-dev
+ 1201  sudo apt-get install openmpi-bin openmpi-common libopenmpi1 libopenmpi-dev
+ 1202  sudo apt-get install openmpi-bin openmpi-common openssh-client openssh-server libopenmpi1.3
+ 1203  sudo apt-get install openmpi-bin openssh-client openssh-server libopenmpi-dbg libopenmpi-dev
+ 1204  sudo apt-get update
+ 1205  sudo apt-get install openmpi-bin openssh-client openssh-server libopenmpi-dbg libopenmpi-dev
+ 1206  sudo apt-get install openssh-client
+ 1207  sudo apt-get install openssh-server
+ 1208  sudo apt-get install openmpi-bin openmpi-common libopenmpi1 libopenmpi-dev
+ 1209  sudo apt-get install openmpi-bin openmpi-common  libopenmpi-dev
+ 1210  su - mpiuser
+ 1211  exit
+ 1212  mpicc -o mpi_sample mpi_sample.c 
+ 1213  sudo mpicc -o mpi_sample mpi_sample.c 
+ 1214  sudo sudo mpicc -o mpi_sample mpi_sample.c 
+ 1215  sudo mpirun -np 2 ./cpi
+ 1216  su - mpiuser 
+ 1217  sudo deluser mpiuser
+ 1218  sudo deluser mpiuser -f
+ 1219  kill 6088
+ 1220  sudo kill 6088
+ 1221  sudo deluser mpiuser -f
+ 1222  sudo kill 21122
+ 1223  sudo deluser mpiuser -f
+ 1224  sudo apt-get install nfs-kernel-server
+ 1225  cat /etc/sudoers
+ 1226  sudo cat /etc/sudoers
+ 1227  cat /etc/exports 
+ 1228  sudo nano /etc/exports 
+ 1229  exportfs -a
+ 1230  sudo exportfs -a
+ 1231  ifconfig
+ 1232  cat /etc/exports 
+ 1233  sudo deluser mpiuser
+ 1234  visudo
+ 1235  sudo visudo
+ 1236  exit
+ 1237  sudo userdel mpiuser
+ 1238  sudo adduser mpiuser
+ 1239  su - mpiuser 
+ 1240  sudo userdel mpiuser
+ 1241  sudo adduser mpiuser
+ 1242  su - mpiuser 
+ 1243  sudo chmod 600 /home/mpiuser/.ssh/authorized_keys
+ 1244  sudo chmod 700 /home/mpiuser/.ssh
+ 1245  su - mpiuser 
+ 1246  cd /etc/ssh/
+ 1247  nano sshd_config 
+ 1248  sudo nano sshd_config 
+ 1249  sudo systemctl restart sshd.service
+ 1250  su - mpiuser 
+ 1251  sudo deluser mpiuser
+ 1252  killall 9374
+ 1253  kill 9374
+ 1254  sudo kill 9374
+ 1255  sudo deluser mpiuser
+ 1256  sudo visudo 
+ 1257  sudo adduser mpiuser
+ 1258  sudo visudo 
+ 1259  su - mpiuser
+ 1260  sudo deluser mpiuser
+ 1261  sudo adduser mpiuser
+ 1262  sudo deluser mpiuser
+ 1263  sudo adduser mpiuser
+ 1264  ssh-keygen -t dsa
+ 1265  apt-get install openssh-server
+ 1266  sudo apt-get install openssh-server
+ 1267  su - mpiuser 
+ 1268  su - mpiuser
+ 1269  su - mpiuser 
+ 1270  su - mpiuser
+ 1271  sudo deluser mpiuser
+ 1272  sudo kill 25292
+ 1273  sudo deluser mpiuser
+ 1274  sudo kill 25297
+ 1275  sudo deluser mpiuser
+ 1276  sudo kill 25797
+ 1277  sudo deluser mpiuser
+ 1278  sudo kill 26302
+ 1279  sudo deluser mpiuser
+ 1280  sudo kill 29619
+ 1281  sudo deluser mpiuser
+ 1282  sudo kill 29888
+ 1283  sudo deluser mpiuser
+ 1284  sudo adduser mpiuser
+ 1285  su - mpiuser 
+ 1286  ssh -vv slave1
+ 1287  su - mpiuser 
+ 1288  sudo deluser mpiuser
+ 1289  kill 2026
+ 1290  sudo 
+ 1291  sudo kill 2026
+ 1292  sudo deluser mpiuser
+ 1293  sudo kill 4283
+ 1294  sudo deluser mpiuser
+ 1295  sudo kill 6730
+ 1296  sudo deluser mpiuser
+ 1297  sudo kill 6867
+ 1298  sudo deluser mpiuser
+ 1299  sudo kill 13991
+ 1300  sudo deluser mpiuser
+ 1301  sudo adduser mpiuser
+ 1302  su - mpiuser 
+ 1303  cp /home/mpiuser/.ssh/id_rsa.pub /home/mpiuser/.ssh/authorized_keys
+ 1304  sudo cp /home/mpiuser/.ssh/id_rsa.pub /home/mpiuser/.ssh/authorized_keys
+ 1305  scp /home/mpiuser/.ssh/id_rsa.pub mpiuser@slave1:.ssh/authorized_keys
+ 1306  sudo scp /home/mpiuser/.ssh/id_rsa.pub mpiuser@slave1:.ssh/authorized_keys
+ 1307  cat /etc/exports
+ 1308  nano /etc/exports
+ 1309  sudo nano /etc/exports
+ 1310  exportfs -a
+ 1311  sudo exportfs -a
+ 1312  su - mpiuser
+ 1313  su - mpiuser
+ 1314  cd Telegram/
+ 1315  sudo sh runTelegram.sh 
+ 1316  exit
+ 1317  sudo apt-get install mpich 
+ 1318  cat /etc/exports 
+ 1319  clear
+ 1320  cat /etc/hosts
+ 1321  su  -m mpiuser 
+ 1322  su - mpiuser 
+ 1323  exit
+ 1324  cd Documents/tec/
+ 1325  make
+ 1326  git clone https://github.com/Sebas95/SecuritySEGW_repo.git
+ 1327  exit
+ 1328  cd App/
+ 1329  ionic serve 
+ 1330  ionic serve --lab
+ 1331  npm i -g ionic@latest
+ 1332  sudo npm i -g ionic@latest
+ 1333  ionic serve --lab
+ 1334  ionic serve
+ 1335  ionic push origin master
+ 1336  git push ionic  master
+ 1337  ionic link
+ 1338  git push ionic  master
+ 1339  git add * 
+ 1340  git commit -m "Labels temperature humiidty and weigth"
+ 1341  git push ionic master
+ 1342  cd ..
+ 1343  git status
+ 1344  git add * 
+ 1345  git commit -m "Labels temperature humiidty and weigth"
+ 1346  git push 
+ 1347  cd Telegram/
+ 1348  sudo sh runTelegram.sh 
+ 1349  exit
+ 1350  sudo shutdown now
+ 1351  cd Telegram/
+ 1352  sudo sh runTelegram.sh 
+ 1353  exit
+ 1354  cd Documents/git/Embedded-Cattle-Feeding-System/App/
+ 1355  ls
+ 1356  ionic serve
+ 1357  cd ..
+ 1358  git pull 
+ 1359  cd App/
+ 1360  ionic serve
+ 1361  sudo npm i -g ionic@latest
+ 1362  ionic serve
+ 1363  cd ..
+ 1364  cd A
+ 1365  cd App/
+ 1366  git push ionic master 
+ 1367  git add * 
+ 1368  git commit -m "Buttons and view for draft 2"
+ 1369  git push ionic master 
+ 1370  cd ..
+ 1371  git add * 
+ 1372  git commit -m "Buttons and view for draft 2"
+ 1373  git push 
+ 1374  git status
+ 1375  exit 
+ 1376  exit
+ 1377  sudo nano /etc/hosts
+ 1378  cat /etc/hosts
+ 1379  ifconfig
+ 1380  ssh slave1
+ 1381  su - mpiuser 
+ 1382  ssh -v\
+ 1383  ssh -v
+ 1384  ssh -v localhost
+ 1385  ifconfig
+ 1386  mpiexec ''version
+ 1387  mpiexec --version
+ 1388  su - mpiuser 
+ 1389  pip install pysoundfile
+ 1390  sudo pip install pysoundfile
+ 1391  python ICA.py 
+ 1392  python ICA_ORIGINAL.py 
+ 1393  python ICA
+ 1394  python ICA.py 
+ 1395  sudo pip install playsound
+ 1396  exit
+ 1397  python plot_ica_blind_source_separation.py 
+ 1398  sudo pip install snack
+ 1399  sudo pip install pysoundfile
+ 1400  python plot_ica_blind_source_separation.py 
+ 1401  cd Documents/tec/
+ 1402  make
+ 1403  python plot_ica_blind_source_separation.py 
+ 1404  reset
+ 1405  python plot_ica_blind_source_separation.py 
+ 1406  sudo pip install pysoundfile
+ 1407  sudo pip install soundfile\
+ 1408  sudo pip install soundfile
+ 1409  python plot_ica_blind_source_separation.py 
+ 1410  sudo pip install playsound
+ 1411  python plot_ica_blind_source_separation.py 
+ 1412  sudo pip install playsound
+ 1413  sudo -H pip install playsound
+ 1414  sudo pip-install --upgrade pip
+ 1415  sudo pip install --upgrade pip
+ 1416  sudo -H pip install --upgrade pip
+ 1417  sudo pip install playsound
+ 1418  sudo -H pip install playsound
+ 1419  sudo pip install tkSnack
+ 1420  sudo pip install playsound
+ 1421  python plot_ica_blind_source_separation.py 
+ 1422  sudo -H pip install snack
+ 1423  python plot_ica_blind_source_separation.py 
+ 1424  sudo -H pip install playsound
+ 1425  sudo python plot_ica_blind_source_separation.py 
+ 1426  sudo -H pip uninstall playsound
+ 1427  sudo -H pip install playsound
+ 1428  python plot_ica_blind_source_separation.py 
+ 1429  sudo apt-get update
+ 1430  sudo apt-get install gstreamer-tools
+ 1431  python plot_ica_blind_source_separation.py 
+ 1432  sudo -H pip install winsound
+ 1433  python --version
+ 1434  python plot_ica_blind_source_separation.py 
+ 1435  sudo apt-get purge python2.7-minimal 
+ 1436  echo 'Hola esta es una prueba para arduino' > /dev/ttyACM0 
+ 1437  echo 'Hola esta es una prueba para arduino' > /dev/robotic_finger 
+ 1438  sudo chmod 666 /dev/robotic_finger
+ 1439  echo 'Hola esta es una prueba para arduino' > /dev/robotic_finger 
+ 1440  echo 'Hola esta es una prueba para arduinop' > /dev/robotic_finger 
+ 1441  ls
+ 1442  cd Documents/git/
+ 1443  ls
+ 1444  cd Embedded-Cattle-Feeding-System/
+ 1445  cd ..
+ 1446  cd Robotic-Finger/
+ 1447  git status
+ 1448  sudo insmod robotic_finger.ko
+ 1449  cd ../libRoboticFingerCon/
+ 1450  ls
+ 1451  gcc -o roboticFingerCon roboticFingerCon.c
+ 1452  ./roboticFingerCon 
+ 1453  gcc -o roboticFingerCon roboticFingerCon.c
+ 1454  ./roboticFingerCon 
+ 1455  gcc -o roboticFingerCon roboticFingerCon.c
+ 1456  ./roboticFingerCon 
+ 1457  gcc -o roboticFingerCon roboticFingerCon.c
+ 1458  ./roboticFingerCon 
+ 1459  gcc -o roboticFingerCon roboticFingerCon.c
+ 1460  ./roboticFingerCon 
+ 1461  gcc -o roboticFingerCon roboticFingerCon.c
+ 1462  ./roboticFingerCon 
+ 1463  gcc -o roboticFingerCon roboticFingerCon.c
+ 1464  ./roboticFingerCon 
+ 1465  gcc -o roboticFingerCon roboticFingerCon.c
+ 1466  ./roboticFingerCon 
+ 1467  gcc -o roboticFingerCon roboticFingerCon.c
+ 1468  ./roboticFingerCon 
+ 1469  gcc -o roboticFingerCon roboticFingerCon.c
+ 1470  ./roboticFingerCon 
+ 1471  gcc -o roboticFingerCon roboticFingerCon.c
+ 1472  ./roboticFingerCon 
+ 1473  gcc -o roboticFingerCon roboticFingerCon.c
+ 1474  ./roboticFingerCon 
+ 1475  gcc -o roboticFingerCon roboticFingerCon.c
+ 1476  ./roboticFingerCon 
+ 1477  gcc -o roboticFingerCon roboticFingerCon.c
+ 1478  ./roboticFingerCon 
+ 1479  gcc -o roboticFingerCon roboticFingerCon.c
+ 1480  ./roboticFingerCon 
+ 1481  gcc -o roboticFingerCon roboticFingerCon.c
+ 1482  ./roboticFingerCon 
+ 1483  gcc -o roboticFingerCon roboticFingerCon.c
+ 1484  ./roboticFingerCon 
+ 1485  gcc -o roboticFingerCon roboticFingerCon.c
+ 1486  ./roboticFingerCon 
+ 1487  gcc -o roboticFingerCon roboticFingerCon.c
+ 1488  ./roboticFingerCon 
+ 1489  gcc -o roboticFingerCon roboticFingerCon.c
+ 1490  ./roboticFingerCon 
+ 1491  gcc -o roboticFingerCon roboticFingerCon.c
+ 1492  ./roboticFingerCon 
+ 1493  gcc -o roboticFingerCon roboticFingerCon.c
+ 1494  ./roboticFingerCon 
+ 1495  gcc -o roboticFingerCon roboticFingerCon.c
+ 1496  ./roboticFingerCon 
+ 1497  gcc -o roboticFingerCon roboticFingerCon.c
+ 1498  ./roboticFingerCon 
+ 1499  gcc -o roboticFingerCon roboticFingerCon.c
+ 1500  ./roboticFingerCon 
+ 1501  gcc -o roboticFingerCon roboticFingerCon.c
+ 1502  ./roboticFingerCon 
+ 1503  gcc -o roboticFingerCon roboticFingerCon.c
+ 1504  ./roboticFingerCon 
+ 1505  ls
+ 1506  gcc -c roboticFingerCon.c
+ 1507  arv rv libroboticFingerCon.a libroboticFingerCon.o 
+ 1508  ar rv libroboticFingerCon.a libroboticFingerCon.o 
+ 1509  gcc -c roboticFingerCon.c
+ 1510  ar rv libroboticFingerCon.a roboticFingerCon.o 
+ 1511  ranlib libbiblioteca.a
+ 1512  ranlib libroboticFingerCon.a 
+ 1513  cd ..
+ 1514  git status
+ 1515  git add *
+ 1516  git commit -m "library of the driver working"
+ 1517  git push 
+ 1518  ls
+ 1519  git status
+ 1520  git add *
+ 1521  git rm comandos_driver.txt 
+ 1522  git commit -m "deleted file"
+ 1523  git push 
+ 1524  git status
+ 1525  cd Documents/tec/
+ 1526  make
+ 1527  sudo apt-get install install atom-terminal
+ 1528  su  - mpiuser 
+ 1529  su - mpiuser 
+ 1530  showmount -e master
+ 1531  sudo chmod 66 filter.c 
+ 1532  exit
+ 1533  git clone https://github.com/geova-25/Cluster-for-image-processing-.git
+ 1534  git statys
+ 1535  git status
+ 1536  cd Cluster-for-image-processing-/
+ 1537  git status
+ 1538  git add *
+ 1539  git commit -m "New code reading a .data image and adding 1 to the bytes"
+ 1540  git push 
+ 1541  cd Documents/git/Cluster-for-image-processing-/
+ 1542  git status
+ 1543  git add * 
+ 1544  git commit -m "The logic for sending the data after applying the filter is done and ready"
+ 1545  git push 
+ 1546  exit
+ 1547  su - mpiuser 
+ 1548  cd Documents/git/
+ 1549  ls
+ 1550  EXIT
+ 1551  mpich -V
+ 1552  mpich -v
+ 1553  mpicc -v
+ 1554  cd Documents/git/
+ 1555  cd Cluster-for-image-processing-/
+ 1556  ls
+ 1557  git status
+ 1558  git pull
+ 1559  ls
+ 1560  mpicc -o filter filter.c
+ 1561  mpiexec -n 6 ./filter
+ 1562  mpicc -o filter filter.c
+ 1563  mpiexec -n 6 ./filter
+ 1564  mpicc -o filter filter.c
+ 1565  mpiexec -n 6 ./filter
+ 1566  mpicc -o filter filter.c
+ 1567  mpiexec -n 6 ./filter
+ 1568  mpicc -o filter filter.c
+ 1569  mpiexec -n 6 ./filter
+ 1570  mpicc -o filter filter.c
+ 1571  mpiexec -n 6 ./filter
+ 1572  mpicc -o filter filter.c
+ 1573  mpiexec -n 6 ./filter
+ 1574  mpicc -o filter filter.c
+ 1575  mpiexec -n 6 ./filter
+ 1576  mpicc -o filter filter.c
+ 1577  mpiexec -n 5 ./filter
+ 1578  mpicc -o filter filter.c
+ 1579  mpiexec -n 5 ./filter
+ 1580  mpiexec -n 6 ./filter
+ 1581  mpiexec -n 5 ./filter
+ 1582  mpicc -o filter filter.c
+ 1583  mpiexec -n 6 ./filter
+ 1584  mpicc -o filter filter.c
+ 1585  mpiexec -n 6 ./filter
+ 1586  mpicc -o filter filter.c
+ 1587  mpiexec -n 6 ./filter
+ 1588  mpiexec -n 5 ./filter
+ 1589  mpiexec -n 6 ./filter
+ 1590  mpicc -o filter filter.c
+ 1591  mpiexec -n 6 ./filter
+ 1592  mpicc -o filter filter.c
+ 1593  mpiexec -n 6 ./filter
+ 1594  mpicc -o filter filter.c
+ 1595  mpiexec -n 5 ./filter
+ 1596  mpiexec -n 6 ./filter
+ 1597  mpiexec -n 5 ./filter
+ 1598  mpicc -o filter filter.c
+ 1599  mpiexec -n 6 ./filter
+ 1600  mpicc -o filter filter.c
+ 1601  mpiexec -n 6 ./filter
+ 1602  mpicc -o filter filter.c
+ 1603  mpiexec -n 6 ./filter
+ 1604  mpiexec -n 5 ./filter
+ 1605  mpiexec -n 6 ./filter
+ 1606  mpicc -o filter filter.c
+ 1607  mpiexec -n 5 ./filter
+ 1608  mpiexec -n 6 ./filter
+ 1609  mpicc -o filter filter.c
+ 1610  mpiexec -n 5 ./filter
+ 1611  mpiexec -n 6 ./filter
+ 1612  mpicc -o filter filter.c
+ 1613  mpiexec -n 5 ./filter
+ 1614  mpicc -o filter filter.c
+ 1615  mpiexec -n 5 ./filter
+ 1616  mpicc -o filter filter.c
+ 1617  mpiexec -n 5 ./filter
+ 1618  mpiexec -n 6 ./filter
+ 1619  mpiexec -n 5 ./filter
+ 1620  mpicc -o filter filter.c
+ 1621  mpiexec -n 6 ./filter
+ 1622  mpicc -o filter filter.c
+ 1623  mpiexec -n 6 ./filter
+ 1624  mpicc -o filter filter.c
+ 1625  mpiexec -n 6 ./filter
+ 1626  mpicc -o filter filter.c
+ 1627  mpiexec -n 6 ./filter
+ 1628  git status
+ 1629  git diff filter
+ 1630  git checkout *
+ 1631  git status
+ 1632  git checkout  filter.c
+ 1633  git status
+ 1634  mpicc -o filter filter.c
+ 1635  mpiexec -n 5 ./filter
+ 1636  mpicc -o filter filter.c
+ 1637  mpiexec -n 5 ./filter
+ 1638  git status
+ 1639  git diif filtro.c
+ 1640  git diff filtro.c
+ 1641  git status
+ 1642  git checkout filtro.c
+ 1643  git status
+ 1644  git add * 
+ 1645  git commit -m "Filter separated in rows but not with a no dividable process number"
+ 1646  git push
+ 1647  mpiexec -n 6 ./filter
+ 1648  mpiexec -n 7 ./filter
+ 1649  mpicc -o filter filter.c
+ 1650  mpiexec -n 7 ./filter
+ 1651  mpicc -o filter filter.c
+ 1652  mpiexec -n 7 ./filter
+ 1653  gcc -o test filtro.c 
+ 1654  ./test 
+ 1655  mpicc -o filter filter.c
+ 1656  mpiexec -n 2 ./filter
+ 1657  mpiexec -n 8 ./filter
+ 1658  mpicc -o filter filter.c
+ 1659  mpiexec -n 7 ./filter
+ 1660  git status
+ 1661  git add * 
+ 1662  git commit -m "With Gaussian filter applied but has to improve when the quantity of processors is not dividable with the number of rows"
+ 1663  git push 
+ 1664  mpiexec -n 30 ./filter
+ 1665  mpiexec -n 7 ./filter
+ 1666  mpicc -o filter filter.c
+ 1667  mpiexec -n 30 ./filter
+ 1668  mpicc -o filter filter.c
+ 1669  mpiexec -n 30 ./filter
+ 1670  mpicc -o filter filter.c
+ 1671  mpiexec -n 30 ./filter
+ 1672  mpicc -o filter filter.c
+ 1673  mpiexec -n 30 ./filter
+ 1674  mpicc -o filter filter.c
+ 1675  mpiexec -n 30 ./filter
+ 1676  mpicc -o filter filter.c
+ 1677  mpiexec -n 30 ./filter
+ 1678  mpicc -o filter filter.c
+ 1679  mpiexec -n 30 ./filter
+ 1680  mpiexec -n 32 ./filter
+ 1681  mpicc -o filter filter.c
+ 1682  mpiexec -n 32 ./filter
+ 1683  mpicc -o filter filter.c
+ 1684  mpiexec -n 32 ./filter
+ 1685  mpicc -o filter filter.c
+ 1686  mpiexec -n 32 ./filter
+ 1687  mpicc -o filter filter.c
+ 1688  mpiexec -n 32 ./filter
+ 1689  mpiexec -n 2 ./filter
+ 1690  mpicc -o filter filter.c
+ 1691  mpiexec -n 32 ./filter
+ 1692  mpiexec -n 1 ./filter
+ 1693  mpicc -o filter filter.c
+ 1694  mpiexec -n 32 ./filter
+ 1695  mpicc -o filter filter.c
+ 1696  mpiexec -n 32 ./filter
+ 1697  mpicc -o filter filter.c
+ 1698  mpiexec -n 32 ./filter
+ 1699  mpicc -o filter filter.c
+ 1700  mpiexec -n 32 ./filter
+ 1701  mpicc -o filter filter.c
+ 1702  mpiexec -n 32 ./filter
+ 1703  mpicc -o filter filter.c
+ 1704  mpiexec -n 32 ./filter
+ 1705  mpicc -o filter filter.c
+ 1706  mpiexec -n 32 ./filter
+ 1707  mpicc -o filter filter.c
+ 1708  mpiexec -n 32 ./filter
+ 1709  mpicc -o filter filter.c
+ 1710  mpiexec -n 32 ./filter
+ 1711  mpicc -o filter filter.c
+ 1712  mpiexec -n 32 ./filter
+ 1713  mpicc -o filter filter.c
+ 1714  mpiexec -n 32 ./filter
+ 1715  mpicc -o filter filter.c
+ 1716  mpiexec -n 32 ./filter
+ 1717  mpicc -o filter filter.c
+ 1718  mpiexec -n 32 ./filter
+ 1719  mpicc -o filter filter.c
+ 1720  mpiexec -n 32 ./filter
+ 1721  mpicc -o filter filter.c
+ 1722  mpiexec -n 32 ./filter
+ 1723  mpicc -o filter filter.c
+ 1724  mpiexec -n 32 ./filter
+ 1725  mpicc -o filter filter.c
+ 1726  mpiexec -n 32 ./filter
+ 1727  mpicc -o filter filter.c
+ 1728  mpiexec -n 32 ./filter
+ 1729  mpicc -o filter filter.c
+ 1730  mpiexec -n 32 ./filter
+ 1731  mpicc -o filter filter.c
+ 1732  mpiexec -n 32 ./filter
+ 1733  mpicc -o filter filter.c
+ 1734  mpiexec -n 32 ./filter
+ 1735  mpicc -o filter filter.c
+ 1736  mpiexec -n 32 ./filter
+ 1737  mpicc -o filter filter.c
+ 1738  mpiexec -n 32 ./filter
+ 1739  mpicc -o filter filter.c
+ 1740  mpiexec -n 32 ./filter
+ 1741  mpicc -o filter filter.c
+ 1742  mpiexec -n 32 ./filter
+ 1743  mpicc -o filter filter.c
+ 1744  mpiexec -n 32 ./filter
+ 1745  mpicc -o filter filter.c
+ 1746  mpiexec -n 32 ./filter
+ 1747  mpicc -o filter filter.c
+ 1748  mpiexec -n 32 ./filter
+ 1749  mpicc -o filter filter.c
+ 1750  mpiexec -n 32 ./filter
+ 1751  mpicc -o filter filter.c
+ 1752  mpiexec -n 32 ./filter
+ 1753  mpicc -o filter filter.c
+ 1754  mpiexec -n 32 ./filter
+ 1755  mpicc -o filter filter.c
+ 1756  mpiexec -n 32 ./filter
+ 1757  mpicc -o filter filter.c
+ 1758  mpiexec -n 32 ./filter
+ 1759  mpicc -o filter filter.c
+ 1760  mpiexec -n 32 ./filter
+ 1761  git status
+ 1762  git add * 
+ 1763  git commit -m "First try to eliminate gap in image"
+ 1764  git push 
+ 1765  cd Documents/tec/
+ 1766  make
+ 1767  sudo deluser mpiuser
+ 1768  l
+ 1769  ls
+ 1770  sudo nemo /home/
+ 1771  sudo nano /etc/hosts
+ 1772  sudo nano /etc/export
+ 1773  sudo nano /etc/exports
+ 1774  exit
+ 1775  cd Documents/git/Embedded-Cattle-Feeding-System/
+ 1776  ls
+ 1777  cd App/
+ 1778  ionic serve
+ 1779  ionic serve --lab
+ 1780  cd Documents/tec/
+ 1781  make
+ 1782  python fibonacciKPN.py i
+ 1783  python fibonacciKPN.py 
+ 1784  python RZE_decoder_v1.py 
+ 1785  clear
+ 1786  python RZE_decoder_v1.py 
+ 1787  clear
+ 1788  python RZE_decoder_v1.py 
+ 1789  clear
+ 1790  python RZE_decoder_v1.py 
+ 1791  clear
+ 1792  python RZE_decoder_v1.py 
+ 1793  clear
+ 1794  python RZE_decoder_v1.py 
+ 1795  clera
+ 1796  clear
+ 1797  python RZE_decoder_v1.py 
+ 1798  cd Documents/tec/
+ 1799  make 
+ 1800  gedit
+ 1801  cd Documents/git/Embedded-Cattle-Feeding-System/
+ 1802  cd App/
+ 1803  ionic serve
+ 1804  clear
+ 1805  cd Documents/git/
+ 1806  cd Embedded-Cattle-Feeding-System/
+ 1807  git status
+ 1808  git pull
+ 1809  git status
+ 1810  git pull
+ 1811  cd App/
+ 1812  ionic serve
+ 1813  ionic serve -w firefox
+ 1814  ionic serve 
+ 1815  ionic serve
+ 1816  git push ionic master
+ 1817  ionic serve
+ 1818  google-chrome-stable
+ 1819  sudo apt-get install google-chrome-stable
+ 1820  google-chrome-stable
+ 1821  ./EmbeddedServer 
+ 1822  cd ..
+ 1823  ls
+ 1824  make
+ 1825  make clean
+ 1826  make
+ 1827  cd bin/
+ 1828  ./EmbeddedServer 
+ 1829  cd ..
+ 1830  git status
+ 1831  git add * 
+ 1832  git status
+ 1833  git commit "Change in server to allow every app to enter, and also the app can now request data from the server"
+ 1834  git commit -m "Change in server to allow every app to enter, and also the app can now request data from the server"
+ 1835  git oush
+ 1836  git push
+ 1837  git status
+ 1838  cd App/
+ 1839  cd ../ServerEmbebido/bin/
+ 1840  ./EmbeddedServer 
+ 1841  sudo apt-get purge google-chrome-stable
+ 1842  sudo apt-get install google-chrome-stable
+ 1843  sudo apt-get install google-chrome
+ 1844  sudo apt-get install chromiun
+ 1845  sudo apt-get remove google-chrome-stable
+ 1846  sudo apt-get purge google-chrome-stable
+ 1847  cd Documents/git/
+ 1848  ls
+ 1849  cd Embedded-Cattle-Feeding-System/
+ 1850  ks
+ 1851  ls
+ 1852  cd Serv
+ 1853  cd ServerEmbebido/
+ 1854  ./E
+ 1855  cd bin/
+ 1856  ./EmbeddedServer 
+ 1857  top
+ 1858  google-chrome-stable
+ 1859  sudo apt-get update nss
+ 1860  sudo apt-get upgrade nss
+ 1861  sudo apt-get install libnss3
+ 1862  sudo apt-get update
+ 1863  google-chrome-stab;e
+ 1864  google-chrome-stable
+ 1865  cd Documents/git/Embedded-Cattle-Feeding-System/App/
+ 1866  git push ionic master
+ 1867  cd ..
+ 1868  git add * 
+ 1869  git commit -m "Get to server test"
+ 1870  cd App/
+ 1871  git push ionic master
+ 1872  git status
+ 1873  git add * 
+ 1874  git commit -m "Get to server test"
+ 1875  git push ionic master
+ 1876  ionic serve
+ 1877  cordova plugin add cordova-plugin-ionic --save --variable APP_ID="ad11ff8f" --variable CHANNEL_NAME="Master" --variable UPDATE_METHOD="background"
+ 1878  ionic serve
+ 1879  cd Documents/git/Robotic-Finger/
+ 1880  ls
+ 1881  git status
+ 1882  git pull
+ 1883  gcc -c roboticFingerCon.c
+ 1884  ar rv libroboticFingerCon.a roboticFingerCon.o
+ 1885  ranlib libroboticFingerCon.a
+ 1886  nm -s libroboticFingerCon.a
+ 1887  cd ..
+ 1888  git status
+ 1889  git git diff Driver/robotic_finger.c
+ 1890  git diff Driver/robotic_finger.c
+ 1891  git checkout Driver/robotic_finger.c
+ 1892  git status
+ 1893  git add 8 
+ 1894  git add * 
+ 1895  git commit -m "Library file"
+ 1896  git push 
+ 1897  gcc -c roboticFingerCon.c
+ 1898  exit
+ 1899  cd Documents/git/
+ 1900  cd Robotic-Finger/
+ 1901  git status
+ 1902  git pull
+ 1903  cd libRoboticFingerCon/
+ 1904  make
+ 1905  make clean
+ 1906  make
+ 1907  make clean
+ 1908  make
+ 1909  cd ..
+ 1910  make
+ 1911  make clean
+ 1912  make
+ 1913  ./main 
+ 1914  make clean
+ 1915  make
+ 1916  ./main 
+ 1917  make clean
+ 1918  make
+ 1919  ./main 
+ 1920  make clean
+ 1921  make
+ 1922  make clean
+ 1923  make
+ 1924  make clean
+ 1925  make
+ 1926  ./main
+ 1927  cd Driver/
+ 1928  ls
+ 1929  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1930  make clena
+ 1931  make clean
+ 1932  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1933  lsmod
+ 1934  lsmod || grep "rob"
+ 1935  greo "rob" || lsmod 
+ 1936  grep "rob" || lsmod 
+ 1937  lsmod || grep "rob"
+ 1938  lsmod || grep "robotic_finger"
+ 1939  lsmod | grep "robotic_finger"
+ 1940  sudo rmmod robotic_finger
+ 1941  sudo insmod robotic_finger.ko
+ 1942  sudo chmod 666 /dev/robotic_finger
+ 1943  sudo insmod robotic_finger.ko
+ 1944  sudo mknod /dev/robotic_finger c 60 0
+ 1945  sudo rmmod robotic_finger
+ 1946  sudo chmod 666 /dev/robotic_finger
+ 1947  sudo insmod robotic_finger.ko
+ 1948  sudo mknod /dev/robotic_finger c 60 0
+ 1949  sudo chmod 666 /dev/robotic_finger
+ 1950  sudo insmod robotic_finger.ko
+ 1951  cat /dev/robotic_finger
+ 1952  lsmod
+ 1953  sudo insmod robotic_finger.ko
+ 1954  sudo insmod robotic_finger.ko
+ 1955  echo 'Hola' > /dev/robotic_finger
+ 1956  sudo chmod 666 /dev/robotic_finger
+ 1957  echo 'Hola' > /dev/robotic_finger
+ 1958  lsmod
+ 1959  sudo mknod /dev/robotic_finger c 60 0
+ 1960  sudo chmod 666 /dev/robotic_finger
+ 1961  cd Documents/git/Robotic-Finger/Driver/
+ 1962  ls
+ 1963  sudo insmod robotic_finger.ko
+ 1964  sudo chmod 666 /dev/robotic_finger
+ 1965  sudo insmod robotic_finger.ko
+ 1966  make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
+ 1967  sudo mknod /dev/robotic_finger c 60 0
+ 1968  sudo chmod 666 /dev/robotic_finger
+ 1969  sudo insmod robotic_finger.ko
+ 1970  cd ..
+ 1971  make
+ 1972  make clean
+ 1973  make
+ 1974  ./main 
+ 1975  lsmod
+ 1976  echo 'Hola' > /dev/robotic_finger
+ 1977  sudo chmod 666 /dev/robotic_finger
+ 1978  echo 'Hola' > /dev/robotic_finger
+ 1979  sudo mknod /dev/robotic_finger c 60 0
+ 1980  cat /dev/robotic_finger
+ 1981  sudo rmmod robotic_finger
+ 1982  cat /dev/robotic_finger
+ 1983  sudo mknod /dev/robotic_finger c 60 0
+ 1984  sudo chmod 666 /dev/robotic_finger
+ 1985  sudo insmod robotic_finger.ko
+ 1986  cd ~/Documents/git/Robotic-Finger/Driver/
+ 1987  sudo insmod robotic_finger.ko
+ 1988  cat /dev/robotic_finger
+ 1989  sudo rmmod robotic_finger
+ 1990  sudo rmmod -f robotic_finger
+ 1991  make
+ 1992  make clean
+ 1993  make
+ 1994  ./main 
+ 1995  git status
+ 1996  git add * 
+ 1997  git commit -m "lib connected with interpreter"
+ 1998  git push 
+ 1999  exit
+ 2000  cd Documents/git/Robotic-Finger/
+ 2001  ls
+ 2002  git pull
+ 2003  cd Driver/
+ 2004  atom comandos_driver.txt 
+ 2005  sudo mknod /dev/robotic_finger c 60 0
+ 2006  sudo chmod 666 /dev/robotic_finger
+ 2007  sudo insmod robotic_finger.ko
+ 2008* make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)sudo rmmod robotic_finger
+ 2009  sudo insmod robotic_finger.ko
+ 2010  echo 'Hola' > /dev/robotic_finger
+ 2011  echo 'Hola' > /dev/ttyACM0 
+ 2012  echo 'Hola' > /dev/robotic_finger
+ 2013  sudo rmmod robotic_finger
+ 2014  sudo insmod robotic_finger.ko
+ 2015  sudo chmod 666 /dev/robotic_finger
+ 2016  echo 'Hola' > /dev/robotic_finger
+ 2017  echo 'Hola' > /dev/ttyACM0 
+ 2018  echo 'Hola' > /dev/robotic_finger
+ 2019  echo 'Hola' > /dev/robotic_finger 
+ 2020  sudo rmmod robotic_finger
+ 2021  sudo insmod robotic_finger.ko
+ 2022  echo 'Hola' > /dev/robotic_finger 
+ 2023  rm /dev/robotic_finger 
+ 2024  echo 'Hola' > /dev/robotic_finger 
+ 2025  sudo mknod /dev/robotic_finger c 60 0
+ 2026  sudo insmod robotic_finger.ko
+ 2027  sudo rmmod robotic_finger
+ 2028  sudo chmod 666 /dev/robotic_finger
+ 2029  sudo insmod robotic_finger.ko
+ 2030  echo 'Hola' > /dev/robotic_finger 
+ 2031  echo 'Hola' > /dev/ttyACM0 
+ 2032  echo 'Hola' > /dev/robotic_finger 
+ 2033  echo 'Hola' > /dev/robotic_finger
+ 2034  sudo insmod robotic_finger.ko
+ 2035  echo 'Hola' > /dev/robotic_finger
+ 2036  sudo rm /dev/robotic_finger 
+ 2037  mknod /dev/robotic_finger c 60 0
+ 2038  sudo mknod /dev/robotic_finger c 60 0
+ 2039  sudo insmod robotic_finger.ko
+ 2040  echo 'Hola' > /dev/robotic_finger
+ 2041  sudo echo 'Hola' > /dev/robotic_finger
+ 2042  sudo chmod 666 /dev/robotic_finger 
+ 2043  sudo chmod 666 /dev/ttyACM0 
+ 2044  sudo echo 'Hola' > /dev/robotic_finger
+ 2045  sudo rm /dev/robotic_finger 
+ 2046  sudo echo 'Hola' > /dev/robotic_finger
+ 2047  sudo chmod 666 /dev/robotic_finger 
+ 2048  sudo echo 'Hola' > /dev/ttyACM0 
+ 2049  sudo chmod 666 /dev/robotic_finger 
+ 2050  sudo rmmod robotic_finger
+ 2051  sudo insmod robotic_finger.ko
+ 2052  sudo chmod 666 /dev/robotic_finger 
+ 2053  sudo chmod 666 /dev/ttyACM0 
+ 2054  sudo echo 'Hola' > /dev/ttyACM0 
+ 2055  sudo echo 'Hola' > /dev/robotic_finger 
+ 2056  cd ..
+ 2057  make
+ 2058  make clean
+ 2059  make
+ 2060  touch history2.txt
+ 2061  hstory >> history2.txt
+ 2062  history >> history2.txt
