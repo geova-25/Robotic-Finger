@@ -99,9 +99,7 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 			sizeInicio = 1;
 			printf("Sin size al inicio, tamaño por defecto 3\n");
 		}
-	}
-
-	if (strncmp(line, "touch", 5) == 0)
+	}else if (strncmp(line, "touch", 5) == 0)
 	{
 		//printf("touch\n");
 		instrus[itera+sizeInicio][0] = 1;
@@ -189,6 +187,8 @@ void getDataConfig(){
 
  	fclose(archivo);
 
+ 	int itera_interna = 0;
+
  	if (lines > 0) {
  		assignedSpace(lines);
 	 	archivo = fopen("interpreter/configuration","r+");
@@ -197,10 +197,11 @@ void getDataConfig(){
 	 	{
 	 		fgets(caracteres,LARGO_LINEA,archivo);
 
-	 		instru_correcta = getInstruction(caracteres, i);
+	 		instru_correcta = getInstruction(caracteres, i - itera_interna);
 	 		if (instru_correcta != 0) {
-	 			i--;
+	 			itera_interna++;
 	 		}
+
 
 	 	}
 
