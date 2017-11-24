@@ -12,6 +12,15 @@
 #include <linux/device.h>
 #include <asm/uaccess.h>
 
+/*--------------------Module Info---------------------------------------------*/
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("Giovanni Villalobos, ITCR");
+MODULE_DESCRIPTION("This module is used to send instructions to robotic Finger"
+    "throught serial communication");
+MODULE_VERSION("1.0");
+
+
 /*---------------------Auxiliar functions and structures----------------------*/
 
 /*
@@ -235,8 +244,3 @@ static void robotic_finger_fini(void)
 
 module_init(robotic_finger_init);
 module_exit(robotic_finger_fini);
-MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Giovanni Villalobos, ITCR");
-MODULE_DESCRIPTION("This module is used to send instructions to robotic Finger"
-    "throught serial communication");
-MODULE_VERSION("1.0"); 
