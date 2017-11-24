@@ -36,6 +36,16 @@ int main()
 
 	 		printf("String final temporal: %s\n", instru_total);
 
+	 		if (codigo == 0) {
+	 			int size = instrucciones[i][1];
+	 			char size_str[1];
+
+	 			sprintf(size_str, "%d", size);
+
+	 			strcat(instru_total, size_str);
+
+	 			printf("Size: %d\n", size);
+	 		}
 	 		if (codigo == 3) {
 	 			int coord = instrucciones[i][1];
 	 			char coord_str[1];
