@@ -86,10 +86,10 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 		if (strncmp(line, "size", 4) == 0) {
 			tokens = strSplit(line, ' ');
 			int s = atoi(*(tokens + 1));
-			printf("S en ITERA0 es: %d\n", s);
 			if (s > 0 && s < 4) {
 				instrus[itera][0] = 0;
 	    		instrus[itera][1] = s;
+	    		printf("S en ITERA0 es: %d\n", s);
 			} else {
 				printf("En size: Rango %d fuera de limites 1-3\n", s);
 				sal = -1;
