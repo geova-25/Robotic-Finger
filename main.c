@@ -45,6 +45,15 @@ int main()
 	 			strcat(instru_total, size_str);
 
 	 			printf("Size: %d\n", size);
+
+	 			int type = instrucciones[i][2];
+	 			char type_str[1];
+
+	 			sprintf(type_str, "%d", type);
+
+	 			strcat(instru_total, type_str);
+
+	 			printf("Type: %d\n", type);
 	 		}
 	 		if (codigo == 3) {
 	 			int coord = instrucciones[i][1];
