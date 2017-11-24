@@ -6,7 +6,7 @@ make -C /usr/src/linux-headers-$(uname -r) M=$(pwd modules)
 
 sudo insmod robotic_finger.ko
 sudo chmod 666 /dev/robotic_finger
-
+sudo chmod 666 /dev/ttyACM0
 
 #--------------------To test the driver
 
