@@ -81,6 +81,7 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 
 	int sal = 0;
 
+	printf("Itera: %d\n", itera);
 	if (itera == 0) {
 		if (strncmp(line, "size", 4) == 0) {
 			tokens = strSplit(line, ' ');
