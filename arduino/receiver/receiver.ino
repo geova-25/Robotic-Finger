@@ -102,6 +102,7 @@ void instSize(String inst)
 void touch(int numero)
 {
   
+  
 }
 
 void push(int numero)
@@ -137,6 +138,168 @@ void drag(char numero)
 {
   numeroActual =  charToString(numero);
   
+  
+  
+  switch (numeroActual) {
+    case 1:
+      moverServoAbajo(numAuxAbajo,85);
+      moverServoMedio(numAuxMedio,84);
+      //moverServoArriba(numAuxArriba,140);
+      numAuxAbajo = 85;
+      numAuxMedio = 84;
+      //numAuxArriba = 140;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 2:
+      moverServoAbajo(numAuxAbajo,83);
+      moverServoMedio(numAuxMedio,74);
+      //moverServoArriba(numAuxArriba,112);
+      numAuxAbajo = 83;
+      numAuxMedio = 74;
+      //numAuxArriba = 112;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 3:
+      moverServoAbajo(numAuxAbajo,80);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,69); //53
+      numAuxAbajo = 80;
+      numAuxMedio = 55;
+      numAuxArriba = 69; //53
+      
+      //moverServoMedio(numAuxMedio,69);
+      //numAuxMedio = 69;
+      
+      //moverServoMedio(numAuxMedio,55);
+      //numAuxMedio = 55;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;  
+    case 4:
+      moverServoAbajo(numAuxAbajo,95);
+      moverServoMedio(numAuxMedio,84);
+      //moverServoArriba(numAuxArriba,142);
+      numAuxAbajo = 95;
+      numAuxMedio = 84;
+      //numAuxArriba = 142;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 5:
+      moverServoAbajo(numAuxAbajo,95);
+      moverServoMedio(numAuxMedio,75);
+      //moverServoArriba(numAuxArriba,112);
+      numAuxAbajo = 95;
+      numAuxMedio = 75;
+      //numAuxArriba = 112;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 6:
+      moverServoAbajo(numAuxAbajo,95);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,70); //53
+      numAuxAbajo = 95;
+      numAuxMedio = 55;
+      numAuxArriba = 70; //53
+      
+      //moverServoMedio(numAuxMedio,68);
+      //numAuxMedio = 68;
+      
+      //moverServoMedio(numAuxMedio,55);
+      //numAuxMedio = 55;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 7:
+      moverServoAbajo(numAuxAbajo,105);
+      moverServoMedio(numAuxMedio,84);
+      //moverServoArriba(numAuxArriba,142);
+      numAuxAbajo = 105;
+      numAuxMedio = 84;
+     // numAuxArriba = 142;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 8:
+      moverServoAbajo(numAuxAbajo,110);
+      moverServoMedio(numAuxMedio,75);
+      //moverServoArriba(numAuxArriba,117);
+      numAuxAbajo = 110;
+      numAuxMedio = 75;
+      //numAuxArriba = 117;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 9:
+      moverServoAbajo(numAuxAbajo,115);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,72); //53
+      numAuxAbajo = 115;
+      numAuxMedio = 55;
+      numAuxArriba = 72; //53
+      
+      
+      //moverServoMedio(numAuxMedio,68);
+     // numAuxMedio = 68;
+      
+      //moverServoMedio(numAuxMedio,55);
+     // numAuxMedio = 55;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 0:
+      moverServoAbajo(numAuxAbajo,120);
+      moverServoMedio(numAuxMedio,75);
+      //moverServoArriba(numAuxArriba,117);
+      numAuxAbajo = 120;
+      numAuxMedio = 75;
+      //numAuxArriba = 117;
+      
+     // moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 11:
+      moverServoAbajo(numAuxAbajo,130);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,80);
+      numAuxAbajo = 130;
+      numAuxMedio = 55;
+      numAuxArriba = 80;
+      
+      
+      //moverServoMedio(numAuxMedio,68);
+      //numAuxMedio = 68;
+      
+      //moverServoMedio(numAuxMedio,55);
+      //numAuxMedio = 55;
+      
+      //moverServoArriba(numAuxArriba,180);
+      //numAuxArriba = 180;
+      break;
+    case 12:
+      // statements
+      break;  
+    default:
+      moverServoAbajo(numAuxAbajo,95);
+      moverServoMedio(numAuxMedio,25);
+      moverServoArriba(numAuxArriba,70); //53
+      numAuxAbajo = 95;
+      numAuxMedio = 25;
+      numAuxArriba = 70; //53
+      break;
+  }
 }
 
 void processInstruction(String inst)
