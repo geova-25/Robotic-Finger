@@ -6,6 +6,8 @@ int count_tmp;
 
 int sizeInstrus;
 
+int sizeInicio = 0;
+
 int **getInstrus() {
 	return instrus;
 }
@@ -79,16 +81,35 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 
 	int sal = 0;
 
+	if (itera == 0) {
+		if (strncmp(line, "size", 4) == 0) {
+			tokens = strSplit(line, ' ');
+			int s = atoi(*(tokens + 1));
+			if (s > 0 && s < 4) {
+				instrus[itera][0] = 0;
+	    		instrus[itera][1] = s;
+			} else {
+				printf("En size: Rango %d fuera de limites 1-3\n", s);
+				sal = -1;
+			}
+		} else {
+			instrus[itera][0] = 0;
+			instrus[itera][1] = 3;
+			sizeInicio = 1;
+			printf("Sin size al inicio, tamaño por defecto 3\n");
+		}
+	}
+
 	if (strncmp(line, "touch", 5) == 0)
 	{
 		//printf("touch\n");
-		instrus[itera][0] = 1;
+		instrus[itera+sizeInicio][0] = 1;
 
 	}
 	else if (strncmp(line, "push", 4) == 0)
 	{
 		//printf("push\n");
-		instrus[itera][0] = 2;
+		instrus[itera+sizeInicio][0] = 2;
 	}
 	else if (strncmp(line, "drag", 4) == 0)
 	{
@@ -96,8 +117,8 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 		tokens = strSplit(line, ' ');
 		int y = atoi(*(tokens + 1));
 		if (y > 0 && y < 10) {
-			instrus[itera][0] = 3;
-    		instrus[itera][1] = y;
+			instrus[itera+sizeInicio][0] = 3;
+    		instrus[itera+sizeInicio][1] = y;
 		} else {
 			printf("En drag: Rango %d fuera de limites 1-9\n", y);
 			sal = -1;
@@ -110,8 +131,8 @@ int getInstruction(char line[LARGO_LINEA], int itera){
 		tokens = strSplit(line, ' ');
 		int n = count_tmp - 1;
 		int coord;
-		instrus[itera][0] = 4;
-		instrus[itera][1] = n;
+		instrus[itera+sizeInicio][0] = 4;
+		instrus[itera+sizeInicio][1] = n;
 		for (int i = 1; i < n; ++i)
 		{
 			coord = atoi(*(tokens + i));
