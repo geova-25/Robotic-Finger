@@ -14,10 +14,10 @@ String serialResponse = "";
 int numeroActual = 0;
 char screenSize = '3';
 void inicio(){
-   moverServoAbajo(numAuxAbajo-1,0);
+   moverServoAbajo(numAuxAbajo-1,85);
    moverServoMedio(numAuxMedio-1,numAuxMedio);
    moverServoArriba(numAuxArriba-1,numAuxArriba);
-   numAuxAbajo = 0;
+   numAuxAbajo = 85;
 }
 
 void moverServoAbajo(int aux, int grados){
@@ -85,14 +85,17 @@ void instSize(String inst)
   screenSize = inst[1]; 
   if(inst[1] == '1')
   {
+    screenSize = '1';
     Serial.print("Small ");
   }
   if(inst[1] == '2')
   {
+    screenSize = '2';
     Serial.print("Medium ");
   }
   if(inst[1] == '3')
   {
+    screenSize = '3';
     Serial.print("Big ");
   } 
   if(inst[2] == '1')
@@ -761,9 +764,9 @@ void dragP(char numero)
       break;
     case 5:
       moverServoAbajo(numAuxAbajo,91); 
-      moverServoMedio(numAuxMedio,75);
+      moverServoMedio(numAuxMedio,72);
       numAuxAbajo = 91;
-      numAuxMedio = 75;
+      numAuxMedio = 72;
       break;
     case 6:
       moverServoAbajo(numAuxAbajo,91);
@@ -800,10 +803,10 @@ void dragP(char numero)
       numAuxMedio = 75;
       break;
     case 11:
-      moverServoAbajo(numAuxAbajo,122);
+      moverServoAbajo(numAuxAbajo,111);
       moverServoMedio(numAuxMedio,55);
       moverServoArriba(numAuxArriba,80);
-      numAuxAbajo = 122;
+      numAuxAbajo = 111;
       numAuxMedio = 55;
       numAuxArriba = 80;
       break;
@@ -936,9 +939,9 @@ void processInstruction(String inst)
     Serial.println("touch");
     if(screenSize == '1')
      touchP(numeroActual);
-    if(screenSize == '2')
+    else if(screenSize == '2')
      touchM(numeroActual);
-    if(screenSize == '3')
+    else if(screenSize == '3')
       touchG(numeroActual);
     else
       Serial.println("Bad screen size");
@@ -948,9 +951,9 @@ void processInstruction(String inst)
     Serial.println("push");
     if(screenSize == '1')
       pushP(numeroActual);
-    if(screenSize == '2')
+    else if(screenSize == '2')
       pushM(numeroActual);
-    if(screenSize == '3')
+    else if(screenSize == '3')
       pushG(numeroActual);
     else
       Serial.println("Bad screen size");
@@ -961,9 +964,9 @@ void processInstruction(String inst)
     Serial.print("drag ");
     if(screenSize == '1')
       dragP(inst[1]);
-    if(screenSize == '2')
+    else if(screenSize == '2')
       dragM(inst[1]);
-    if(screenSize == '3')
+    else if(screenSize == '3')
       dragG(inst[1]);
     else
       Serial.println("Bad screen size");
@@ -999,6 +1002,8 @@ void splitInstructions()
      }
       
    }
+  dragP('a');
+  touchP(numeroActual);
 }
 
 void setup()
@@ -1013,7 +1018,7 @@ void setup()
 
 void loop()
 {
-  //inicio();
+  inicio();
  
   /*dragG('5');
   pushG(5);
@@ -1036,7 +1041,7 @@ void loop()
   dragG('9');
   touchG(numeroActual);
   dragG('a'); 
-  touchG(numeroActual);*/
+  touchG(numeroActual);
   
   dragP('4');
   touchP(numeroActual);
@@ -1045,7 +1050,7 @@ void loop()
   dragP('6');
   touchP(numeroActual);
   
- /* dragP('7');
+  dragP('7');
   touchP(numeroActual);
   dragP('8');
   touchP(numeroActual);
@@ -1058,13 +1063,13 @@ void loop()
   touchP(numeroActual);
   dragP('3');
   touchP(numeroActual);
-  */
+
   dragP('0');
   touchP(numeroActual);
 
-dragP('c');
+  dragP('a');
   touchP(numeroActual);
-  /*dragM('5');
+  dragM('5');
   touchM(numeroActual);
   pushM(5);
   dragM('6');
@@ -1089,8 +1094,8 @@ dragP('c');
   touchM(numeroActual);*/
   
   
-  /*if ( Serial.available()) {
+  if ( Serial.available()) {
     splitInstructions();
-  }*/
+  }
 }
 
