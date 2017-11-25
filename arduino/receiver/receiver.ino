@@ -390,10 +390,10 @@ void dragG(char numero)
       numAuxMedio = 75;
       break;
     case 11:
-      moverServoAbajo(numAuxAbajo,130);
+      moverServoAbajo(numAuxAbajo,126);
       moverServoMedio(numAuxMedio,55);
       moverServoArriba(numAuxArriba,80);
-      numAuxAbajo = 130;
+      numAuxAbajo = 126;
       numAuxMedio = 55;
       numAuxArriba = 80;
       break;
@@ -1002,8 +1002,22 @@ void splitInstructions()
      }
       
    }
-  dragP('a');
-  touchP(numeroActual);
+   if(screenSize == '1')
+   {
+     dragP('a');
+     touchP(numeroActual);
+   }
+   else if(screenSize == '2')
+   {
+     dragM('a');
+     touchP(numeroActual);
+   }
+   else if(screenSize == '3')
+   {
+     dragG('a');
+     touchP(numeroActual);
+   }
+  
 }
 
 void setup()
