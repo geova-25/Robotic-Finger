@@ -107,82 +107,45 @@ void instSize(String inst)
 
 void touchG(int numero)
 {
+  Serial.println(numero);
   switch (numero) {
     case 1:
-      //moverServoAbajo(numAuxAbajo,85);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,140);
-      //numAuxAbajo = 85;
-      //numAuxMedio = 84;
       numAuxArriba = 140;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 2:
-      //moverServoAbajo(numAuxAbajo,83);
-      //moverServoMedio(numAuxMedio,74);
       moverServoArriba(numAuxArriba,112);
-      //numAuxAbajo = 83;
-      //numAuxMedio = 74;
-      numAuxArriba = 112;
-      
+      numAuxArriba = 112;  
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 3:
-      //moverServoAbajo(numAuxAbajo,80);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,69); //53
-      //numAuxAbajo = 80;
-      //numAuxMedio = 55;
-      //numAuxArriba = 69; //53
-      
-      moverServoMedio(numAuxMedio,69);
-      numAuxMedio = 69;
-      
+      moverServoMedio(numAuxMedio,73);
+      numAuxMedio = 73;
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;  
     case 4:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,142);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 84;
       numAuxArriba = 142;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 5:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,112);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 75;
       numAuxArriba = 112;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 6:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,70); //53
-      //numAuxAbajo = 95;
-      //numAuxMedio = 55;
-      //numAuxArriba = 70; //53
-      
-      moverServoMedio(numAuxMedio,68);
-      numAuxMedio = 68;
-      
+      moverServoMedio(numAuxMedio,72);
+      numAuxMedio = 72;
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
@@ -200,58 +163,33 @@ void touchG(int numero)
     case 8:
       //moverServoAbajo(numAuxAbajo,110);
       //moverServoMedio(numAuxMedio,75);
-      moverServoArriba(numAuxArriba,117);
+      moverServoArriba(numAuxArriba,130);
       //numAuxAbajo = 110;
       //numAuxMedio = 75;
-      numAuxArriba = 117;
+      numAuxArriba = 130;
       
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 9:
-      //moverServoAbajo(numAuxAbajo,115);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,72); //53
-      //numAuxAbajo = 115;
-      //numAuxMedio = 55;
-      //numAuxArriba = 72; //53
-      
-      
       moverServoMedio(numAuxMedio,68);
       numAuxMedio = 68;
-      
       moverServoMedio(numAuxMedio,55);
-      numAuxMedio = 55;
-      
+      numAuxMedio = 55; 
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 0:
-      //moverServoAbajo(numAuxAbajo,120);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,117);
-      //numAuxAbajo = 120;
-      //numAuxMedio = 75;
       numAuxArriba = 117;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 11:
-      //moverServoAbajo(numAuxAbajo,130);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,80);
-      //numAuxAbajo = 130;
-      //numAuxMedio = 55;
-      //numAuxArriba = 80;
-      
-      
       moverServoMedio(numAuxMedio,68);
       numAuxMedio = 68;
-      
       moverServoMedio(numAuxMedio,55);
-      numAuxMedio = 55;
-      
+      numAuxMedio = 55;    
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
@@ -272,116 +210,69 @@ void touchG(int numero)
 
 void pushG(int numero)
 {
+  Serial.println(numero);
   switch (numero) {
     case 1:
-      //moverServoAbajo(numAuxAbajo,85);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,140);
-      //numAuxAbajo = 85;
-      //numAuxMedio = 84;
       numAuxArriba = 140;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 2:
-      //moverServoAbajo(numAuxAbajo,83);
-      //moverServoMedio(numAuxMedio,74);
       moverServoArriba(numAuxArriba,112);
-      //numAuxAbajo = 83;
-      //numAuxMedio = 74;
       numAuxArriba = 112;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 3:
-      //moverServoAbajo(numAuxAbajo,80);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,69); //53
-      //numAuxAbajo = 80;
-      //numAuxMedio = 55;
-      //numAuxArriba = 69; //53
-      
-      moverServoMedio(numAuxMedio,69);
-      numAuxMedio = 69;
+      moverServoMedio(numAuxMedio,73);
+      numAuxMedio = 73;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;  
     case 4:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,142);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 84;
       numAuxArriba = 142;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 5:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,112);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 75;
       numAuxArriba = 112;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 6:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,70); //53
-      //numAuxAbajo = 95;
-      //numAuxMedio = 55;
-      //numAuxArriba = 70; //53
-      
-      moverServoMedio(numAuxMedio,68);
-      numAuxMedio = 68;
+      moverServoMedio(numAuxMedio,72);
+      numAuxMedio = 72;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
-      numAuxMedio = 55;
-      
+      numAuxMedio = 55; 
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 7:
-      //moverServoAbajo(numAuxAbajo,105);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,142);
-      //numAuxAbajo = 105;
-      //numAuxMedio = 84;
       numAuxArriba = 142;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 8:
-      //moverServoAbajo(numAuxAbajo,110);
-      //moverServoMedio(numAuxMedio,75);
-      moverServoArriba(numAuxArriba,117);
-      //numAuxAbajo = 110;
-      //numAuxMedio = 75;
-      numAuxArriba = 117;
+      moverServoArriba(numAuxArriba,130);
+      numAuxArriba = 130;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 9:
-      //moverServoAbajo(numAuxAbajo,115);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,72); //53
-      //numAuxAbajo = 115;
-      //numAuxMedio = 55;
-      //numAuxArriba = 72; //53
-      
-      
       moverServoMedio(numAuxMedio,68);
       numAuxMedio = 68;
       delay(3000);
@@ -392,36 +283,23 @@ void pushG(int numero)
       numAuxArriba = 180;
       break;
     case 0:
-      //moverServoAbajo(numAuxAbajo,120);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,117);
-      //numAuxAbajo = 120;
-      //numAuxMedio = 75;
       numAuxArriba = 117;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 11:
-      //moverServoAbajo(numAuxAbajo,130);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,80);
-      //numAuxAbajo = 130;
-      //numAuxMedio = 55;
-      //numAuxArriba = 80;
-      
-      
       moverServoMedio(numAuxMedio,68);
       numAuxMedio = 68;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 12:
-      // statements
+    
       break;  
     default:
       moverServoAbajo(numAuxAbajo,95);
@@ -445,24 +323,14 @@ void dragG(char numero)
     case 1:
       moverServoAbajo(numAuxAbajo,85);
       moverServoMedio(numAuxMedio,84);
-      //moverServoArriba(numAuxArriba,140);
       numAuxAbajo = 85;
       numAuxMedio = 84;
-      //numAuxArriba = 140;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 2:
       moverServoAbajo(numAuxAbajo,83);
       moverServoMedio(numAuxMedio,74);
-      //moverServoArriba(numAuxArriba,112);
       numAuxAbajo = 83;
       numAuxMedio = 74;
-      //numAuxArriba = 112;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 3:
       moverServoAbajo(numAuxAbajo,80);
@@ -471,37 +339,18 @@ void dragG(char numero)
       numAuxAbajo = 80;
       numAuxMedio = 55;
       numAuxArriba = 69; //53
-      
-      //moverServoMedio(numAuxMedio,69);
-      //numAuxMedio = 69;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;  
     case 4:
       moverServoAbajo(numAuxAbajo,95);
       moverServoMedio(numAuxMedio,84);
-      //moverServoArriba(numAuxArriba,142);
       numAuxAbajo = 95;
       numAuxMedio = 84;
-      //numAuxArriba = 142;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 5:
       moverServoAbajo(numAuxAbajo,95);
       moverServoMedio(numAuxMedio,75);
-      //moverServoArriba(numAuxArriba,179);
       numAuxAbajo = 95;
       numAuxMedio = 75;
-      //numAuxArriba = 179;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 6:
       moverServoAbajo(numAuxAbajo,95);
@@ -510,37 +359,18 @@ void dragG(char numero)
       numAuxAbajo = 95;
       numAuxMedio = 55;
       numAuxArriba = 70; //53
-      
-      //moverServoMedio(numAuxMedio,68);
-      //numAuxMedio = 68;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 7:
       moverServoAbajo(numAuxAbajo,105);
       moverServoMedio(numAuxMedio,84);
-      //moverServoArriba(numAuxArriba,142);
       numAuxAbajo = 105;
       numAuxMedio = 84;
-     // numAuxArriba = 142;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 8:
       moverServoAbajo(numAuxAbajo,110);
-      moverServoMedio(numAuxMedio,75);
-      //moverServoArriba(numAuxArriba,117);
+      moverServoMedio(numAuxMedio,79);
       numAuxAbajo = 110;
-      numAuxMedio = 75;
-      //numAuxArriba = 117;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
+      numAuxMedio = 79;
       break;
     case 9:
       moverServoAbajo(numAuxAbajo,115);
@@ -549,27 +379,12 @@ void dragG(char numero)
       numAuxAbajo = 115;
       numAuxMedio = 55;
       numAuxArriba = 72; //53
-      
-      
-      //moverServoMedio(numAuxMedio,68);
-     // numAuxMedio = 68;
-      
-      //moverServoMedio(numAuxMedio,55);
-     // numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 0:
       moverServoAbajo(numAuxAbajo,120);
       moverServoMedio(numAuxMedio,75);
-      //moverServoArriba(numAuxArriba,117);
       numAuxAbajo = 120;
       numAuxMedio = 75;
-      //numAuxArriba = 117;
-      
-     // moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 11:
       moverServoAbajo(numAuxAbajo,130);
@@ -578,19 +393,8 @@ void dragG(char numero)
       numAuxAbajo = 130;
       numAuxMedio = 55;
       numAuxArriba = 80;
-      
-      
-      //moverServoMedio(numAuxMedio,68);
-      //numAuxMedio = 68;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 12:
-      // statements
       break;  
     default:
       moverServoAbajo(numAuxAbajo,95);
@@ -632,42 +436,29 @@ int charToString(char n)
 
 void pushP(int numero)
 {
+  Serial.println(numero);
 }
 void pushM(int numero)
 {
+  Serial.println(numero);
   switch (numero) {
     case 1:
-      //moverServoAbajo(numAuxAbajo,82);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,139);
-      //numAuxAbajo = 82;
-      //numAuxMedio = 84;
       numAuxArriba = 139;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 2:
-      //moverServoAbajo(numAuxAbajo,80);
-      //moverServoMedio(numAuxMedio,74);
       moverServoArriba(numAuxArriba,110);
-     // numAuxAbajo = 80;
-      //numAuxMedio = 74;
       numAuxArriba = 110;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 3:
-      //moverServoAbajo(numAuxAbajo,77);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,69); //53
-      //numAuxAbajo = 77;
-      //numAuxMedio = 55;
-      //numAuxArriba = 69; //53
-      
-      moverServoMedio(numAuxMedio,69);
-      numAuxMedio = 69;
+      moverServoMedio(numAuxMedio,73);
+      numAuxMedio = 73;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
@@ -676,110 +467,64 @@ void pushM(int numero)
       numAuxArriba = 180;
       break;  
     case 4:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,140);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 84;
       numAuxArriba = 140;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 5:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,110);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 75;
       numAuxArriba = 110;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 6:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,70); //53
-      //numAuxAbajo = 95;
-      //numAuxMedio = 55;
-      //numAuxArriba = 70; //53
-      
-      moverServoMedio(numAuxMedio,70);
-      numAuxMedio = 70;
+      moverServoMedio(numAuxMedio,72);
+      numAuxMedio = 72;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 7:
-      //moverServoAbajo(numAuxAbajo,100);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,140);
-      //numAuxAbajo = 100;
-      //numAuxMedio = 84;
       numAuxArriba = 140;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 8:
-      //moverServoAbajo(numAuxAbajo,100);
-      //moverServoMedio(numAuxMedio,75);
-      moverServoArriba(numAuxArriba,112);
-      //numAuxAbajo = 100;
-      //numAuxMedio = 75;
-      numAuxArriba = 112;
+      moverServoArriba(numAuxArriba,114);
+      numAuxArriba = 114;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 9:
-      //moverServoAbajo(numAuxAbajo,110);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,72); //53
-      //numAuxAbajo = 110;
-      //numAuxMedio = 55;
-      //numAuxArriba = 72; //53
-      
-      
       moverServoMedio(numAuxMedio,68);
       numAuxMedio = 68;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 0:
-      //moverServoAbajo(numAuxAbajo,110);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,111);
-      //numAuxAbajo = 100;
-      //numAuxMedio = 75;
       numAuxArriba = 111;
       delay(3000);
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 11:
-      //moverServoAbajo(numAuxAbajo,115);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,80);
-      //numAuxAbajo = 115;
-      //numAuxMedio = 55;
-      //numAuxArriba = 80;
-      
-      
       moverServoMedio(numAuxMedio,68);
       numAuxMedio = 68;
       delay(3000);
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
@@ -799,154 +544,170 @@ void pushM(int numero)
 
 void touchP(int numero)
 {
-}
-void touchM(int numero)
-{
+  Serial.println(numero);
   switch (numero) {
     case 1:
-      //moverServoAbajo(numAuxAbajo,82);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,139);
-      //numAuxAbajo = 82;
-      //numAuxMedio = 84;
       numAuxArriba = 139;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 2:
-      //moverServoAbajo(numAuxAbajo,80);
-      //moverServoMedio(numAuxMedio,74);
       moverServoArriba(numAuxArriba,110);
-     // numAuxAbajo = 80;
-      //numAuxMedio = 74;
       numAuxArriba = 110;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 3:
-      //moverServoAbajo(numAuxAbajo,77);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,69); //53
-      //numAuxAbajo = 77;
-      //numAuxMedio = 55;
-      //numAuxArriba = 69; //53
-      
-      moverServoMedio(numAuxMedio,69);
-      numAuxMedio = 69;
-      
+      moverServoMedio(numAuxMedio,73);
+      numAuxMedio = 73;
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;  
     case 4:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,140);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 84;
       numAuxArriba = 140;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 5:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,110);
-      //numAuxAbajo = 95;
-      //numAuxMedio = 75;
       numAuxArriba = 110;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 6:
-      //moverServoAbajo(numAuxAbajo,95);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,70); //53
-      //numAuxAbajo = 95;
-      //numAuxMedio = 55;
-      //numAuxArriba = 70; //53
-      
-      moverServoMedio(numAuxMedio,70);
-      numAuxMedio = 70;
-      
+      moverServoMedio(numAuxMedio,72);
+      numAuxMedio = 72;
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 7:
-      //moverServoAbajo(numAuxAbajo,100);
-      //moverServoMedio(numAuxMedio,84);
       moverServoArriba(numAuxArriba,140);
-      //numAuxAbajo = 100;
-      //numAuxMedio = 84;
       numAuxArriba = 140;
-      
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 8:
-      //moverServoAbajo(numAuxAbajo,100);
-      //moverServoMedio(numAuxMedio,75);
-      moverServoArriba(numAuxArriba,112);
-      //numAuxAbajo = 100;
-      //numAuxMedio = 75;
-      numAuxArriba = 112;
-      
+      moverServoArriba(numAuxArriba,114);
+      numAuxArriba = 114;
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 9:
-      //moverServoAbajo(numAuxAbajo,110);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,72); //53
-      //numAuxAbajo = 110;
-      //numAuxMedio = 55;
-      //numAuxArriba = 72; //53
-      
-      
       moverServoMedio(numAuxMedio,68);
-      numAuxMedio = 68;
-      
+      numAuxMedio = 68;    
       moverServoMedio(numAuxMedio,55);
-      numAuxMedio = 55;
-      
+      numAuxMedio = 55;  
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 0:
-      //moverServoAbajo(numAuxAbajo,110);
-      //moverServoMedio(numAuxMedio,75);
       moverServoArriba(numAuxArriba,111);
-      //numAuxAbajo = 100;
-      //numAuxMedio = 75;
-      numAuxArriba = 111;
-      
+      numAuxArriba = 111; 
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
     case 11:
-      //moverServoAbajo(numAuxAbajo,115);
-      //moverServoMedio(numAuxMedio,55);
-      //moverServoArriba(numAuxArriba,80);
-      //numAuxAbajo = 115;
-      //numAuxMedio = 55;
-      //numAuxArriba = 80;
-      
-      
       moverServoMedio(numAuxMedio,68);
-      numAuxMedio = 68;
-      
+      numAuxMedio = 68;      
+      moverServoMedio(numAuxMedio,55);
+      numAuxMedio = 55;    
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 12:
+      // statements
+      break;  
+    default:
+      moverServoAbajo(numAuxAbajo,95);
+      moverServoMedio(numAuxMedio,25);
+      moverServoArriba(numAuxArriba,70); //53
+      numAuxAbajo = 95;
+      numAuxMedio = 25;
+      numAuxArriba = 70; //53
+      break;
+  }
+}
+void touchM(int numero)
+{
+  Serial.println(numero);
+  switch (numero) {
+    case 1:
+      moverServoArriba(numAuxArriba,139);
+      numAuxArriba = 139;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 2:
+      moverServoArriba(numAuxArriba,110);
+      numAuxArriba = 110;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 3:
+      moverServoMedio(numAuxMedio,73);
+      numAuxMedio = 73;
       moverServoMedio(numAuxMedio,55);
       numAuxMedio = 55;
-      
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;  
+    case 4:
+      moverServoArriba(numAuxArriba,140);
+      numAuxArriba = 140;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 5:
+      moverServoArriba(numAuxArriba,110);
+      numAuxArriba = 110;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 6:
+      moverServoMedio(numAuxMedio,72);
+      numAuxMedio = 72;
+      moverServoMedio(numAuxMedio,55);
+      numAuxMedio = 55;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 7:
+      moverServoArriba(numAuxArriba,140);
+      numAuxArriba = 140;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 8:
+      moverServoArriba(numAuxArriba,114);
+      numAuxArriba = 114;
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 9:
+      moverServoMedio(numAuxMedio,68);
+      numAuxMedio = 68;    
+      moverServoMedio(numAuxMedio,55);
+      numAuxMedio = 55;  
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 0:
+      moverServoArriba(numAuxArriba,111);
+      numAuxArriba = 111; 
+      moverServoArriba(numAuxArriba,180);
+      numAuxArriba = 180;
+      break;
+    case 11:
+      moverServoMedio(numAuxMedio,68);
+      numAuxMedio = 68;      
+      moverServoMedio(numAuxMedio,55);
+      numAuxMedio = 55;    
       moverServoArriba(numAuxArriba,180);
       numAuxArriba = 180;
       break;
@@ -968,11 +729,100 @@ void dragP(char numero)
 {
   numeroActual =  charToString(numero);
   Serial.println(numeroActual);
-  
   moverServoArriba(numAuxArriba,179);
   numAuxArriba = 179;
   
+    switch (numeroActual) {
+    case 1:
+      moverServoAbajo(numAuxAbajo,83);
+      moverServoMedio(numAuxMedio,84);  
+      numAuxAbajo = 83;
+      numAuxMedio = 84;
+      break;
+    case 2:
+      moverServoAbajo(numAuxAbajo,82);
+      moverServoMedio(numAuxMedio,74);
+      numAuxAbajo = 82;
+      numAuxMedio = 74;
+      break;
+    case 3:
+      moverServoAbajo(numAuxAbajo,79);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,69); //53
+      numAuxAbajo = 79;
+      numAuxMedio = 55;
+      numAuxArriba = 69; //53
+      break;  
+    case 4:
+      moverServoAbajo(numAuxAbajo,91);
+      moverServoMedio(numAuxMedio,84);
+      numAuxAbajo = 91;
+      numAuxMedio = 84;
+      break;
+    case 5:
+      moverServoAbajo(numAuxAbajo,91); 
+      moverServoMedio(numAuxMedio,75);
+      numAuxAbajo = 91;
+      numAuxMedio = 75;
+      break;
+    case 6:
+      moverServoAbajo(numAuxAbajo,91);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,70); //53
+      numAuxAbajo = 91;
+      numAuxMedio = 55;
+      numAuxArriba = 70; //53
+      break;
+    case 7:
+      moverServoAbajo(numAuxAbajo,98);
+      moverServoMedio(numAuxMedio,84);
+      numAuxAbajo = 98;
+      numAuxMedio = 84;
+      break;
+    case 8:
+      moverServoAbajo(numAuxAbajo,98);
+      moverServoMedio(numAuxMedio,75);
+      numAuxAbajo = 98;
+      numAuxMedio = 75;
+      break;
+    case 9:
+      moverServoAbajo(numAuxAbajo,104);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,72); //53
+      numAuxAbajo = 104;
+      numAuxMedio = 55;
+      numAuxArriba = 72; //53
+      break;
+    case 0:
+      moverServoAbajo(numAuxAbajo,107);
+      moverServoMedio(numAuxMedio,75);
+      numAuxAbajo = 107;
+      numAuxMedio = 75;
+      break;
+    case 11:
+      moverServoAbajo(numAuxAbajo,122);
+      moverServoMedio(numAuxMedio,55);
+      moverServoArriba(numAuxArriba,80);
+      numAuxAbajo = 122;
+      numAuxMedio = 55;
+      numAuxArriba = 80;
+      break;
+    case 12:
+      // statements
+      break;  
+    default:
+      moverServoAbajo(numAuxAbajo,95);
+      moverServoMedio(numAuxMedio,25);
+      moverServoArriba(numAuxArriba,70); //53
+      numAuxAbajo = 95;
+      numAuxMedio = 25;
+      numAuxArriba = 70; //53
+      break;
+  }
+   
 }
+
+
 void dragM(char numero)
 {
   numeroActual =  charToString(numero);
@@ -983,25 +833,15 @@ void dragM(char numero)
   switch (numeroActual) {
     case 1:
       moverServoAbajo(numAuxAbajo,82);
-      moverServoMedio(numAuxMedio,84);
-      //moverServoArriba(numAuxArriba,139);
+      moverServoMedio(numAuxMedio,84);  
       numAuxAbajo = 82;
       numAuxMedio = 84;
-      //numAuxArriba = 139;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 2:
       moverServoAbajo(numAuxAbajo,80);
       moverServoMedio(numAuxMedio,74);
-      //moverServoArriba(numAuxArriba,110);
       numAuxAbajo = 80;
       numAuxMedio = 74;
-      //numAuxArriba = 110;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 3:
       moverServoAbajo(numAuxAbajo,77);
@@ -1010,76 +850,39 @@ void dragM(char numero)
       numAuxAbajo = 77;
       numAuxMedio = 55;
       numAuxArriba = 69; //53
-      
-      //moverServoMedio(numAuxMedio,69);
-      //numAuxMedio = 69;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;  
     case 4:
-      moverServoAbajo(numAuxAbajo,95);
+      moverServoAbajo(numAuxAbajo,91);
       moverServoMedio(numAuxMedio,84);
       //moverServoArriba(numAuxArriba,140);
-      numAuxAbajo = 95;
+      numAuxAbajo = 91;
       numAuxMedio = 84;
-      //numAuxArriba = 140;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 5:
-      moverServoAbajo(numAuxAbajo,95); 
+      moverServoAbajo(numAuxAbajo,91); 
       moverServoMedio(numAuxMedio,75);
-      //moverServoArriba(numAuxArriba,110);
-      numAuxAbajo = 95;
+      numAuxAbajo = 91;
       numAuxMedio = 75;
-      //numAuxArriba = 110;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 6:
-      moverServoAbajo(numAuxAbajo,95);
+      moverServoAbajo(numAuxAbajo,91);
       moverServoMedio(numAuxMedio,55);
       moverServoArriba(numAuxArriba,70); //53
-      numAuxAbajo = 95;
+      numAuxAbajo = 91;
       numAuxMedio = 55;
       numAuxArriba = 70; //53
-      
-      //moverServoMedio(numAuxMedio,70);
-      //numAuxMedio = 70;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 7:
       moverServoAbajo(numAuxAbajo,100);
       moverServoMedio(numAuxMedio,84);
-      //moverServoArriba(numAuxArriba,140);
       numAuxAbajo = 100;
       numAuxMedio = 84;
-      //numAuxArriba = 140;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 8:
       moverServoAbajo(numAuxAbajo,100);
       moverServoMedio(numAuxMedio,75);
-      //moverServoArriba(numAuxArriba,112);
       numAuxAbajo = 100;
       numAuxMedio = 75;
-      //numAuxArriba = 112;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 9:
       moverServoAbajo(numAuxAbajo,110);
@@ -1088,27 +891,12 @@ void dragM(char numero)
       numAuxAbajo = 110;
       numAuxMedio = 55;
       numAuxArriba = 72; //53
-      
-      
-      //moverServoMedio(numAuxMedio,68);
-      //numAuxMedio = 68;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 0:
       moverServoAbajo(numAuxAbajo,110);
       moverServoMedio(numAuxMedio,75);
-      //moverServoArriba(numAuxArriba,111);
       numAuxAbajo = 100;
       numAuxMedio = 75;
-      //numAuxArriba = 111;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 11:
       moverServoAbajo(numAuxAbajo,115);
@@ -1117,16 +905,6 @@ void dragM(char numero)
       numAuxAbajo = 115;
       numAuxMedio = 55;
       numAuxArriba = 80;
-      
-      
-      //moverServoMedio(numAuxMedio,68);
-      //numAuxMedio = 68;
-      
-      //moverServoMedio(numAuxMedio,55);
-      //numAuxMedio = 55;
-      
-      //moverServoArriba(numAuxArriba,180);
-      //numAuxArriba = 180;
       break;
     case 12:
       // statements
@@ -1237,20 +1015,20 @@ void loop()
 {
   //inicio();
  
-  dragG('5');
+  /*dragG('5');
   pushG(5);
   dragG('6');
-  
+  touchG(numeroActual);
   dragG('4');
   touchG(numeroActual);
   dragG('3');
   pushG(3);
   dragG('7');
-   
+   touchG(numeroActual);
   dragG('2');
   touchG(numeroActual);
   dragG('8');
-  
+  touchG(numeroActual);
   dragG('1');
   pushG(1);
   dragG('0');
@@ -1258,23 +1036,49 @@ void loop()
   dragG('9');
   touchG(numeroActual);
   dragG('a'); 
-  /*
+  touchG(numeroActual);*/
+  
+  dragP('4');
+  touchP(numeroActual);
+  dragP('5');
+  touchP(numeroActual);
+  dragP('6');
+  touchP(numeroActual);
+  
+ /* dragP('7');
+  touchP(numeroActual);
+  dragP('8');
+  touchP(numeroActual);
+  dragP('9');
+  touchP(numeroActual);
+  
+   dragP('1');
+  touchP(numeroActual);
+  dragP('2');
+  touchP(numeroActual);
+  dragP('3');
+  touchP(numeroActual);
+  */
+  dragP('0');
+  touchP(numeroActual);
 
-  dragM('5');
-
+dragP('c');
+  touchP(numeroActual);
+  /*dragM('5');
+  touchM(numeroActual);
   pushM(5);
   dragM('6');
-  
+  touchM(numeroActual);
   dragM('4');
   touchM(numeroActual);
   dragM('3');
   pushM(3);
   dragM('7');
-   
+   touchM(numeroActual);
   dragM('2');
   touchM(numeroActual);
   dragM('8');
-  
+  touchM(numeroActual);
   dragM('1');
   pushM(1);
   dragM('0');
@@ -1282,7 +1086,9 @@ void loop()
   dragM('9');
   touchM(numeroActual);
   dragM('a');
-  */
+  touchM(numeroActual);*/
+  
+  
   /*if ( Serial.available()) {
     splitInstructions();
   }*/

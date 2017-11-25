@@ -410,7 +410,7 @@ void setup() {
 }
  
 void loop() {
-  inicio();
+  //inicio();
   
   /*setNumero(6);
   setNumero(5);
@@ -424,17 +424,17 @@ void loop() {
   setNumero(9);
   setNumero(11);*/
   
-  //setNumeroMedio(6);
-  //setNumeroMedio(5);
-  //setNumeroMedio(4);
-  //setNumeroMedio(1);
-  //setNumeroMedio(2);
-  //setNumeroMedio(3);
-  //setNumeroMedio(9);
-  //setNumeroMedio(8);
-  //setNumeroMedio(7);
-  //setNumeroMedio(0);
-  //setNumeroMedio(11);
+  setNumeroMedio(6);
+  setNumeroMedio(5);
+  setNumeroMedio(4);
+  setNumeroMedio(1);
+  setNumeroMedio(2);
+  setNumeroMedio(3);
+  setNumeroMedio(9);
+  setNumeroMedio(8);
+  setNumeroMedio(7);
+  setNumeroMedio(0);
+  setNumeroMedio(11);
   
   
   
