@@ -12,7 +12,7 @@
 #include <linux/device.h>
 #include <asm/uaccess.h>
 
-/*--------------------Module Info---------------------------------------------*/
+/*------------------------------Module Info-----------------------------------*/
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Giovanni Villalobos, ITCR");
@@ -20,6 +20,16 @@ MODULE_DESCRIPTION("This module is used to send instructions to robotic Finger"
     "throught serial communication");
 MODULE_VERSION("1.0");
 
+/*------------------------------Definitions-----------------------------------*/
+
+// Max len of the buffer that will be write
+#define ROBOTIC_FINGER_LEN_BUFFER 500
+// Name of the module driver
+#define ROBOTIC_FINGER_NAME_STRING "robotic_finger"
+// Mutex to avoid having more than one accesing the file
+DEFINE_MUTEX(mutex_file_only_one_user_at_the_time);
+//Creates a new struct type of file to open the serial of Arduino
+static struct file *robotic_finger = NULL;
 
 /*---------------------Auxiliar functions and structures----------------------*/
 
@@ -43,10 +53,10 @@ static struct file *robotic_finger_aux_open(const char *filename, int flags, umo
 ** count is the size of the buffer to write
 */
 
-static ssize_t robotic_finger_aux_write(struct file *f, const char *buf, int count)
+static ssize_t robotic_finger_aux_write(struct file *file_to_write, const char *buffer, int count)
 {
 
-    int result;
+    int result_of_write;
     /* This three lines help to  avoid the system call from failing because
     this is kernel space that is usually forbidden */
     mm_segment_t oldfs;
@@ -55,12 +65,12 @@ static ssize_t robotic_finger_aux_write(struct file *f, const char *buf, int cou
     set_fs(KERNEL_DS);
 
     //Here we write the buffer to the file of serial port
-    f->f_pos = 0;
-    result = f->f_op->write(f, buf, count, &f->f_pos);
+    file_to_write->f_pos = 0;
+    result_of_write = file_to_write->f_op->write(file_to_write, buffer, count, &file_to_write->f_pos);
     //Restore the space of the kernel space and prevent further system calls
     set_fs(oldfs);
 
-    return result;
+    return result_of_write;
 }
 
 /*
@@ -69,15 +79,12 @@ static ssize_t robotic_finger_aux_write(struct file *f, const char *buf, int cou
 ** id is the owner of the file
 **
 */
-static void robotic_finger_aux_close(struct file *robotic_finger, fl_owner_t id)
+static void robotic_finger_aux_close(struct file *file_to_close, fl_owner_t id)
 {
-        filp_close(robotic_finger, id);
+        filp_close(file_to_close, id);
 }
 
 /*-------------------Main functions allowed in module-------------------------*/
-DEFINE_MUTEX(mutex_file_only_one_user_at_the_time);
-//Creates a new struct type of file to open the serial of Arduino
-static struct file *robotic_finger = NULL;
 
 
 /*
@@ -88,16 +95,16 @@ static struct file *robotic_finger = NULL;
 */
 static int robotic_finger_open(struct inode *inode, struct file *filp)
 {
-    #define robotic_finger_MAX_PATH 20
-    #define robotic_finger_NUM 0
     //To proccess only one at the time and to avoid error that can be done
-    //char filename[robotic_finger_MAX_PATH];
     if(!(mutex_trylock(&mutex_file_only_one_user_at_the_time)))
-        return -EBUSY;
+    {
+        return -1;
+    }
 
     robotic_finger = robotic_finger_aux_open("/dev/ttyACM0", 0, O_RDWR);
     //If there was no error opening the file unlock the mux
-    if (PTR_RET(robotic_finger)) {
+    if (PTR_RET(robotic_finger))
+    {
         mutex_unlock(&mutex_file_only_one_user_at_the_time);
         return PTR_RET(robotic_finger);
     }
@@ -131,31 +138,40 @@ static ssize_t robotic_finger_write(struct file *filp,
                  loff_t * f_pos)
 {
 
-    #define robotic_finger_MAX_BUF_LEN 200
-    const char instr_buf[robotic_finger_MAX_BUF_LEN];
-
+    const char instr_buf[ROBOTIC_FINGER_LEN_BUFFER];
 
     //This checks if count is minor than the max buffer aasign count value,
     //else assign the max buffer size
-    count = count < robotic_finger_MAX_BUF_LEN ? count : robotic_finger_MAX_BUF_LEN;
+    if(count < ROBOTIC_FINGER_LEN_BUFFER)
+    {
+      count = count;
+    }
+    else
+    {
+      count = ROBOTIC_FINGER_LEN_BUFFER;
+    }
 
     //The function copy from user send the data that user passes to the
     //serial, the data is stored in instr_buf.
     if (copy_from_user((char *)instr_buf, (const char __user *)buf, count))
-        return -EFAULT;
+    {
+        return -1;
+    }
     //Here if there is no error en robotic_finger then data is write to the serial
     //that was stored in instr_buf
     if (!IS_ERR_OR_NULL(robotic_finger))
-        return robotic_finger_aux_write(robotic_finger, instr_buf, count);
+    {
+      return robotic_finger_aux_write(robotic_finger, instr_buf, count);
+    }
     else
-        return -EFAULT;
+        return -1;
 }
 
 
 /*
 ** The file operations struct that hold pointers to the functions defined by
 ** the driver to handle the requested operations
-**
+** the owner prevents for module being unloaded whe it is in use
 **
 */
 static struct file_operations robotic_finger_ops = {
@@ -180,7 +196,6 @@ static int robotic_finger_major;
 
 static int robotic_finger_init(void)
 {
-    #define robotic_finger_NAME "robotic_finger"
 
     //dev_t is used to hold major and minor numbers
     //MKDEV can give as return a dev_t is you have major and minor
@@ -192,7 +207,7 @@ static int robotic_finger_init(void)
     dev_t devt = MKDEV(0, 0);
 
     //This will allocate a Major Number for us, just one, with the given name
-    if (alloc_chrdev_region(&devt, 0, 1, robotic_finger_NAME) < 0)
+    if (alloc_chrdev_region(&devt, 0, 1, ROBOTIC_FINGER_NAME_STRING) < 0)
         return -1;
     robotic_finger_major = MAJOR(devt);
     //Struct cdev is a element of the inode, struct cdev is the representation
@@ -200,32 +215,31 @@ static int robotic_finger_init(void)
     //As I want to make use of a char device, I had to create a cdev structure
     //so I can invoke a device of this type
     cdev_init(&cdev, &robotic_finger_ops);
+    // the owner prevents for module being unloaded whe it is in use
     cdev.owner = THIS_MODULE;
     devt = MKDEV(robotic_finger_major, 0);
     //This will simple add the char device to the system
     if (cdev_add(&cdev, devt, 1))
-        goto exit0;
+    {
+        unregister_chrdev_region(MKDEV(robotic_finger_major, 0), 1);
+        return -1;
+    }
     //Creates a new class of device that is in /sys/class
-    class = class_create(THIS_MODULE, robotic_finger_NAME);
+    class = class_create(THIS_MODULE, ROBOTIC_FINGER_NAME_STRING);
     if (!class)
-        goto exit1;
-
+    {
+        cdev_del(&cdev);
+        return -1;
+    }
     //This lines will take the Major number assignated above,then assign those
     //to the class created before
     devt = MKDEV(robotic_finger_major, 0);
-    if (!(device_create(class, NULL, devt, NULL, robotic_finger_NAME)))
-        goto exit2;
-
+    if (!(device_create(class, NULL, devt, NULL, ROBOTIC_FINGER_NAME_STRING)))
+    {
+        class_destroy(class);
+        return -1;
+    }
     return 0;
-
-exit2:
-    class_destroy(class);
-exit1:
-    cdev_del(&cdev);
-exit0:
-    unregister_chrdev_region(MKDEV(robotic_finger_major, 0), 1);
-
-    return -1;
 }
 
 /*
@@ -241,6 +255,8 @@ static void robotic_finger_fini(void)
     cdev_del(&cdev);
     unregister_chrdev_region(MKDEV(robotic_finger_major, 0), 1);
 }
+
+/*-----------------Functions called when the module is inserted---------------*/
 
 module_init(robotic_finger_init);
 module_exit(robotic_finger_fini);
